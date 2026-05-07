@@ -12,12 +12,10 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/TextAppearance.Modela.ScreenTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profile"
-            android:textSize="@dimen/text_title"
-            android:textColor="@color/match_text_primary"
-            android:fontFamily="sans-serif-light"
             android:paddingHorizontal="@dimen/spacing_xl"
             android:paddingBottom="@dimen/spacing_xl" />
 
@@ -77,55 +75,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Membership -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_card_premium"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="@dimen/spacing_xl"
-            android:layout_marginHorizontal="@dimen/spacing_xl"
-            android:layout_marginBottom="@dimen/spacing_xl">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_star"
-                android:contentDescription="Membership"
-                app:tint="@color/match_gold" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginStart="@dimen/spacing_lg">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/membership_premium"
-                    android:textColor="@color/match_gold"
-                    android:textSize="@dimen/text_body"
-                    android:fontFamily="sans-serif-medium" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/membership_desc"
-                    android:textColor="@color/match_text_secondary"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_chevron_right"
-                android:contentDescription="Open"
-                app:tint="@color/match_text_hint" />
-        </LinearLayout>
-
         <!-- General Section -->
         <TextView
             android:layout_width="match_parent"
@@ -183,7 +132,7 @@
             android:layout_marginHorizontal="@dimen/spacing_xl"
             android:layout_marginTop="@dimen/spacing_xxl"
             android:layout_marginBottom="@dimen/spacing_xxl"
-            style="@style/Widget.Modela.Button.Outlined" />
+            style="@style/Widget.Modela.Button.DangerOutlined" />
 
         <TextView
             android:layout_width="match_parent"

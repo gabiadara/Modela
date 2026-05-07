@@ -19,19 +19,16 @@
             android:layout_height="wrap_content"
             android:text="M"
             android:textSize="56sp"
-            android:textColor="@color/match_gold"
+            android:textColor="@color/match_auth_link"
             android:fontFamily="sans-serif-light"
             android:layout_marginTop="@dimen/spacing_huge"
             android:layout_marginBottom="@dimen/spacing_lg" />
 
         <TextView
+            style="@style/TextAppearance.Modela.ScreenTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/welcome_back"
-            android:textSize="@dimen/text_title"
-            android:textColor="@color/match_text_primary"
-            android:fontFamily="sans-serif-light"
-            android:letterSpacing="0.02"
             android:layout_marginBottom="@dimen/spacing_xxxl" />
 
         <!-- Email Field -->
@@ -85,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@string/forgot_password"
-            android:textColor="@color/match_gold"
+            android:textColor="@color/match_auth_link"
             android:textSize="@dimen/text_caption"
             android:padding="@dimen/spacing_sm"
             android:layout_marginBottom="@dimen/spacing_xxl" />
@@ -105,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_lg"
             android:visibility="gone"
-            android:indeterminateTint="@color/match_gold" />
+            android:indeterminateTint="@color/match_auth_link" />
 
         <!-- Error Text -->
         <TextView
@@ -144,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"
-                android:textColor="@color/match_gold"
+                android:textColor="@color/match_auth_link"
                 android:textSize="@dimen/text_caption"
                 android:fontFamily="sans-serif-medium"
                 android:paddingStart="@dimen/spacing_xs"

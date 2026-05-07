@@ -3,6 +3,7 @@ package com.modela.app.ui.chat
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.modela.app.R
 import com.modela.app.data.model.ChatConversation
 import com.modela.app.databinding.ItemChatConversationBinding
 import com.modela.app.util.loadImage
@@ -27,7 +28,7 @@ class ChatListAdapter(
         holder.binding.tvName.text = conv.participantName
         holder.binding.tvLastMessage.text = conv.lastMessage
         holder.binding.tvTime.text = conv.timestamp.toTimeAgo()
-        holder.binding.ivAvatar.loadImage(conv.participantAvatar)
+        holder.binding.ivAvatar.loadImage(conv.participantAvatar, R.drawable.ic_avatar_placeholder)
         if (conv.unreadCount > 0) {
             holder.binding.tvUnreadCount.visible()
             holder.binding.tvUnreadCount.text = conv.unreadCount.toString()

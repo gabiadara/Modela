@@ -18,18 +18,16 @@
             android:layout_height="wrap_content"
             android:text="M"
             android:textSize="48sp"
-            android:textColor="@color/match_gold"
+            android:textColor="@color/match_auth_link"
             android:fontFamily="sans-serif-light"
             android:layout_marginTop="@dimen/spacing_xxxl"
             android:layout_marginBottom="@dimen/spacing_md" />
 
         <TextView
+            style="@style/TextAppearance.Modela.ScreenTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/create_your_account"
-            android:textSize="@dimen/text_title"
-            android:textColor="@color/match_text_primary"
-            android:fontFamily="sans-serif-light"
             android:layout_marginBottom="@dimen/spacing_xxl" />
 
         <!-- User Type Selection -->
@@ -66,7 +64,7 @@
                     android:layout_height="32dp"
                     android:src="@drawable/ic_person"
                     android:contentDescription="Model"
-                    app:tint="@color/match_gold" />
+                    app:tint="@color/match_auth_link" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -94,7 +92,7 @@
                     android:layout_height="32dp"
                     android:src="@drawable/ic_star"
                     android:contentDescription="Contractor"
-                    app:tint="@color/match_gold" />
+                    app:tint="@color/match_auth_link" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -205,7 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_lg"
             android:visibility="gone"
-            android:indeterminateTint="@color/match_gold" />
+            android:indeterminateTint="@color/match_auth_link" />
 
         <TextView
             android:id="@+id/tvError"
@@ -241,7 +239,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_in"
-                android:textColor="@color/match_gold"
+                android:textColor="@color/match_auth_link"
                 android:textSize="@dimen/text_caption"
                 android:fontFamily="sans-serif-medium"
                 android:paddingStart="@dimen/spacing_xs"

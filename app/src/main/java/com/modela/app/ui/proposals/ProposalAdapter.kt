@@ -35,8 +35,8 @@ class ProposalAdapter(
             binding.tvProposalCategory.text = proposal.category
             binding.tvJobTitle.text = proposal.jobTitle
             binding.tvJobDescription.text = proposal.jobDescription
-            binding.tvProposalLocation.text = "📍 ${proposal.location}"
-            binding.tvProposalDate.text = "📅 ${proposal.date}"
+            binding.tvProposalLocation.text = "Local: ${proposal.location}"
+            binding.tvProposalDate.text = "Data: ${proposal.date}"
             binding.tvProposalBudget.text = proposal.budget
 
             // Status badge

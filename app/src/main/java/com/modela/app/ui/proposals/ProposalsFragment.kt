@@ -102,13 +102,15 @@ class ProposalsFragment : Fragment() {
 
     private fun highlightChip(chip: TextView?) {
         chip?.let {
-            it.setTextColor(resources.getColor(com.modela.app.R.color.match_text_primary, null))
+            it.isSelected = true
+            it.setTextColor(resources.getColor(com.modela.app.R.color.match_white, null))
             it.setTypeface(null, Typeface.BOLD)
         }
     }
 
     private fun resetChip(chip: TextView?) {
         chip?.let {
+            it.isSelected = false
             it.setTextColor(resources.getColor(com.modela.app.R.color.match_text_secondary, null))
             it.setTypeface(null, Typeface.NORMAL)
         }

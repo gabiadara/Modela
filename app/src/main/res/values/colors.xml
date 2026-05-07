@@ -25,6 +25,7 @@
     <color name="match_text_primary">#FF0E0E0E</color>
     <color name="match_text_secondary">#FF5E5E5E</color>
     <color name="match_text_hint">#FF8B8B8B</color>
+    <color name="match_auth_link">#FF747474</color>
 
     <!-- Surface Colors -->
     <color name="match_surface">#FFFFFFFF</color>

@@ -45,7 +45,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/match_gold_light"
-                android:textSize="@dimen/text_small" />
+                android:textSize="@dimen/text_caption"
+                android:fontFamily="sans-serif-medium" />
         </LinearLayout>
     </FrameLayout>
 </androidx.cardview.widget.CardView>

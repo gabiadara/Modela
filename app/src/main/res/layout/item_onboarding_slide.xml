@@ -17,13 +17,10 @@
 
     <TextView
         android:id="@+id/tvSlideTitle"
+        style="@style/TextAppearance.Modela.ScreenTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_title"
-        android:textColor="@color/match_text_primary"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:letterSpacing="0.02" />
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/tvSlideDescription"

@@ -13,15 +13,15 @@ fun View.visible() { visibility = View.VISIBLE }
 fun View.gone() { visibility = View.GONE }
 fun View.invisible() { visibility = View.INVISIBLE }
 
-fun ImageView.loadImage(url: String?) {
+fun ImageView.loadImage(url: String?, placeholderRes: Int = R.drawable.bg_placeholder) {
     if (url.isNullOrEmpty()) {
-        setImageResource(R.drawable.bg_placeholder)
+        setImageResource(placeholderRes)
         return
     }
     Glide.with(context)
         .load(url)
-        .placeholder(R.drawable.bg_placeholder)
-        .error(R.drawable.bg_placeholder)
+        .placeholder(placeholderRes)
+        .error(placeholderRes)
         .transition(DrawableTransitionOptions.withCrossFade())
         .centerCrop()
         .into(this)
