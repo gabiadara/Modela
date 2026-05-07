@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/match_obsidian"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/spacing_xxl">
+
+    <ImageView
+        android:id="@+id/ivSlideImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="@dimen/spacing_xxxl"
+        android:src="@drawable/bg_placeholder"
+        android:contentDescription="Onboarding illustration" />
+
+    <TextView
+        android:id="@+id/tvSlideTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/match_text_primary"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:letterSpacing="0.02" />
+
+    <TextView
+        android:id="@+id/tvSlideDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/match_text_secondary"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:layout_marginTop="@dimen/spacing_lg" />
+</LinearLayout>

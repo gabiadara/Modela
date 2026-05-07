@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/spacing_xs">
+    <LinearLayout
+        android:id="@+id/bubbleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:maxWidth="@dimen/chat_bubble_max_width"
+        android:background="@drawable/bg_chat_bubble_sent"
+        android:padding="@dimen/spacing_md"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/match_text_primary"
+            android:textSize="@dimen/text_caption" />
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/match_text_hint"
+            android:textSize="10sp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/spacing_xxs" />
+    </LinearLayout>
+</FrameLayout>

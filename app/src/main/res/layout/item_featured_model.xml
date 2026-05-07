@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/featured_card_width"
+    android:layout_height="@dimen/featured_card_height"
+    android:layout_marginEnd="@dimen/spacing_lg"
+    app:cardCornerRadius="@dimen/radius_lg"
+    app:cardElevation="@dimen/elevation_card"
+    app:cardBackgroundColor="@color/match_surface_elevated">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivModelPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_placeholder"
+            android:contentDescription="Model photo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_overlay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_lg">
+
+            <TextView
+                android:id="@+id/tvModelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/match_white"
+                android:textSize="@dimen/text_subtitle"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/tvModelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/match_gold_light"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="@dimen/spacing_xxs" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/spacing_sm">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_star"
+                    android:contentDescription="Rating"
+                    app:tint="@color/match_gold" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/match_gold_light"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginStart="@dimen/spacing_xs" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="@dimen/spacing_md"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_heart_outline"
+            android:contentDescription="Favorite"
+            app:tint="@color/match_white" />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>
