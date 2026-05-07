@@ -68,6 +68,30 @@
         tools:layout="@layout/fragment_settings" />
 
     <fragment
+        android:id="@+id/proposalsFragment"
+        android:name="com.modela.app.ui.proposals.ProposalsFragment"
+        android:label="Propostas"
+        tools:layout="@layout/fragment_proposals">
+        <action
+            android:id="@+id/action_proposals_to_detail"
+            app:destination="@id/proposalDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/proposalDetailFragment"
+        android:name="com.modela.app.ui.proposals.ProposalDetailFragment"
+        android:label="Detalhes da Proposta"
+        tools:layout="@layout/fragment_proposal_detail">
+        <argument
+            android:name="proposalId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
         android:id="@+id/modelProfileFragment"
         android:name="com.modela.app.ui.profile.ModelProfileFragment"
         android:label="Model Profile"

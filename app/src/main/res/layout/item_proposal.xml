@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_lg"
+    android:layout_marginBottom="@dimen/spacing_md"
+    app:cardCornerRadius="@dimen/radius_lg"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/match_surface_elevated">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg">
+
+        <!-- Header: Photo + Info + Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProposalPhoto"
+                android:layout_width="@dimen/avatar_medium"
+                android:layout_height="@dimen/avatar_medium"
+                android:src="@drawable/bg_placeholder" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/spacing_md">
+
+                <TextView
+                    android:id="@+id/tvProposalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/match_text_primary"
+                    android:textSize="@dimen/text_body"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tvProposalCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="@dimen/text_caption"
+                    android:layout_marginTop="@dimen/spacing_xxs" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProposalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_badge"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:paddingVertical="@dimen/spacing_xs"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/match_divider"
+            android:layout_marginVertical="@dimen/spacing_md" />
+
+        <!-- Job Title -->
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/match_text_primary"
+            android:textSize="@dimen/text_subtitle"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Job Description -->
+        <TextView
+            android:id="@+id/tvJobDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/match_text_secondary"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Details Row: Location + Date + Budget -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProposalLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="@dimen/text_small"
+                    android:drawablePadding="@dimen/spacing_xs" />
+
+                <TextView
+                    android:id="@+id/tvProposalDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginTop="@dimen/spacing_xxs" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProposalBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/match_text_primary"
+                android:textSize="@dimen/text_subtitle"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Action Buttons (visibility toggled by code) -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btnReject"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/spacing_sm"
+                android:background="@drawable/bg_button_reject"
+                android:gravity="center"
+                android:text="Recusar"
+                android:textColor="@color/match_error"
+                android:textSize="@dimen/text_button"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/btnAccept"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:background="@drawable/bg_button_accept"
+                android:gravity="center"
+                android:text="Aceitar"
+                android:textColor="@color/match_white"
+                android:textSize="@dimen/text_button"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -14,11 +14,11 @@ object MockDataProvider {
 
         ModelProfile(
             "1",
-            "Sophia Laurent",
-            "",
+            "Adara",
+            "file:///android_asset/amigos/adara1.jpeg",
             "Moda",
             "Modelo internacional de moda com 8 anos de experiência em alta-costura e trabalhos editoriais.",
-            4.9f,
+            5.0f,
             156,
             12400,
             "1,78 m",
@@ -29,7 +29,7 @@ object MockDataProvider {
             "61 cm",
             "89 cm",
             "37",
-            listOf(),
+            listOf("file:///android_asset/amigos/adara2.jpeg"),
             mapOf("instagram" to "@sophialaurent"),
             false,
             "Blumenau, SC"
@@ -37,11 +37,11 @@ object MockDataProvider {
 
         ModelProfile(
             "2",
-            "Isabella Cruz",
-            "",
+            "Isaac",
+            "file:///android_asset/amigos/isaac1.jpeg",
             "Editorial",
             "Modelo editorial premiada, destaque em grandes revistas de moda.",
-            4.8f,
+            5.0f,
             203,
             18900,
             "1,75 m",
@@ -52,7 +52,7 @@ object MockDataProvider {
             "59 cm",
             "87 cm",
             "36",
-            listOf(),
+            listOf("file:///android_asset/amigos/isaac2.jpeg"),
             mapOf("instagram" to "@isabellacruz"),
             false,
             "Balneário Camboriú, SC"
@@ -60,11 +60,11 @@ object MockDataProvider {
 
         ModelProfile(
             "3",
-            "Amara Okafor",
-            "",
+            "Sofia",
+            "file:///android_asset/amigos/sofia1.jpeg",
             "Passarela",
             "Modelo de passarela com experiência em eventos de moda nacionais e internacionais.",
-            4.7f,
+            5.0f,
             89,
             8700,
             "1,80 m",
@@ -75,7 +75,7 @@ object MockDataProvider {
             "63 cm",
             "91 cm",
             "39",
-            listOf(),
+            listOf("file:///android_asset/amigos/sofia2.jpeg"),
             mapOf("instagram" to "@amaraokafor"),
             false,
             "Itajaí, SC"
@@ -83,11 +83,11 @@ object MockDataProvider {
 
         ModelProfile(
             "4",
-            "Valentina Rossi",
-            "",
+            "Giovana",
+            "file:///android_asset/amigos/giovana1.jpeg",
             "Comercial",
             "Modelo comercial versátil especializada em beleza, lifestyle e marcas premium.",
-            4.6f,
+            5.0f,
             178,
             15200,
             "1,73 m",
@@ -110,7 +110,7 @@ object MockDataProvider {
             "",
             "Glamour",
             "Modelo glamour reconhecida pelo estilo sofisticado e elegante.",
-            4.9f,
+            5.0f,
             134,
             21300,
             "1,70 m",
@@ -370,4 +370,77 @@ object MockDataProvider {
     fun getModelById(id: String): ModelProfile? {
         return (getFeaturedModels() + getTrendingModels()).find { it.id == id }
     }
+
+    fun getProposals(): List<Proposal> = listOf(
+        Proposal(
+            id = "p1",
+            modelName = "Adara",
+            modelImageUrl = "file:///android_asset/amigos/adara1.jpeg",
+            companyName = "Vogue Brasil",
+            companyImageUrl = "",
+            jobTitle = "Ensaio Editorial Verão 2026",
+            jobDescription = "Sessão fotográfica para coleção de verão. Produção completa com maquiagem e styling inclusos.",
+            category = "Editorial",
+            location = "Balneário Camboriú, SC",
+            date = "15 Jun 2026",
+            budget = "R$ 3.500",
+            status = ProposalStatus.PENDING
+        ),
+        Proposal(
+            id = "p2",
+            modelName = "Isaac",
+            modelImageUrl = "file:///android_asset/amigos/isaac1.jpeg",
+            companyName = "Studio Luxe",
+            companyImageUrl = "",
+            jobTitle = "Campanha Publicitária - Marca Premium",
+            jobDescription = "Campanha fotográfica para marca de luxo. 2 dias de produção em estúdio profissional.",
+            category = "Comercial",
+            location = "Blumenau, SC",
+            date = "22 Jun 2026",
+            budget = "R$ 5.000",
+            status = ProposalStatus.ACCEPTED
+        ),
+        Proposal(
+            id = "p3",
+            modelName = "Sofia",
+            modelImageUrl = "file:///android_asset/amigos/sofia1.jpeg",
+            companyName = "Fashion Week SC",
+            companyImageUrl = "",
+            jobTitle = "Desfile Coleção Inverno",
+            jobDescription = "Desfile de moda para apresentação da coleção de inverno. Ensaio e passarela.",
+            category = "Passarela",
+            location = "Itajaí, SC",
+            date = "10 Jul 2026",
+            budget = "R$ 2.800",
+            status = ProposalStatus.PENDING
+        ),
+        Proposal(
+            id = "p4",
+            modelName = "Giovana",
+            modelImageUrl = "file:///android_asset/amigos/giovana1.jpeg",
+            companyName = "Beleza Natural Co.",
+            companyImageUrl = "",
+            jobTitle = "Campanha Skincare",
+            jobDescription = "Ensaio para lançamento de linha de produtos de beleza natural e sustentável.",
+            category = "Comercial",
+            location = "Brusque, SC",
+            date = "05 Jul 2026",
+            budget = "R$ 4.200",
+            status = ProposalStatus.COMPLETED
+        ),
+        Proposal(
+            id = "p5",
+            modelName = "Adara",
+            modelImageUrl = "file:///android_asset/amigos/adara1.jpeg",
+            companyName = "Atelier Couture",
+            companyImageUrl = "",
+            jobTitle = "Lookbook Alta-Costura",
+            jobDescription = "Produção de lookbook exclusivo para nova coleção de alta-costura. Locação externa.",
+            category = "Moda",
+            location = "Florianópolis, SC",
+            date = "20 Jul 2026",
+            budget = "R$ 6.000",
+            status = ProposalStatus.PENDING
+        )
+    )
 }

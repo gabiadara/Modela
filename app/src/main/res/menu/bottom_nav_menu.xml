@@ -9,12 +9,12 @@
         android:icon="@drawable/ic_search"
         android:title="" />
     <item
-        android:id="@+id/chatListFragment"
-        android:icon="@drawable/ic_chat"
+        android:id="@+id/proposalsFragment"
+        android:icon="@drawable/ic_proposals"
         android:title="" />
     <item
-        android:id="@+id/favoritesFragment"
-        android:icon="@drawable/ic_heart"
+        android:id="@+id/chatListFragment"
+        android:icon="@drawable/ic_chat"
         android:title="" />
     <item
         android:id="@+id/settingsFragment"
