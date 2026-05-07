@@ -64,7 +64,8 @@
         android:paddingHorizontal="@dimen/spacing_lg"
         android:paddingBottom="@dimen/spacing_lg"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2" />
+        app:spanCount="2"
+        android:layout_marginBottom="70dp" />
 
     <!-- Empty State -->
     <LinearLayout

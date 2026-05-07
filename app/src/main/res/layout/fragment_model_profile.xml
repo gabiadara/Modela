@@ -119,31 +119,6 @@
                     android:textSize="@dimen/text_small" />
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/match_divider" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/tvFollowers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/match_gold"
-                    android:textSize="@dimen/text_title"
-                    android:fontFamily="sans-serif-medium" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/followers"
-                    android:textColor="@color/match_text_secondary"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
         </LinearLayout>
 
         <!-- Action Buttons -->
@@ -156,7 +131,7 @@
             <Button
                 android:id="@+id/btnHire"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/hire_model"
                 android:layout_marginEnd="@dimen/spacing_sm"
@@ -165,7 +140,7 @@
             <Button
                 android:id="@+id/btnFavorite"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/add_to_favorites"
                 android:layout_marginStart="@dimen/spacing_sm"

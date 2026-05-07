@@ -178,7 +178,7 @@
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="wrap_content"
             android:text="@string/logout"
             android:layout_marginHorizontal="@dimen/spacing_xl"
             android:layout_marginTop="@dimen/spacing_xxl"

@@ -2,131 +2,145 @@
     <string name="app_name">Modela</string>
 
     <!-- Splash -->
-    <string name="splash_tagline">Where Fashion Meets Opportunity</string>
+    <string name="splash_tagline">Onde a Moda Encontra Oportunidades</string>
 
     <!-- Onboarding -->
-    <string name="onboarding_title_1">Discover Top Models</string>
-    <string name="onboarding_desc_1">Browse through a curated selection of professional models from around the world. Find the perfect match for your next project.</string>
-    <string name="onboarding_title_2">Connect &amp; Collaborate</string>
-    <string name="onboarding_desc_2">Chat directly with models or contractors, discuss projects, and build lasting professional relationships.</string>
-    <string name="onboarding_title_3">Book With Confidence</string>
-    <string name="onboarding_desc_3">Secure bookings, manage contracts, and grow your career or brand in the fashion industry.</string>
-    <string name="onboarding_get_started">Get Started</string>
-    <string name="onboarding_next">Next</string>
-    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_title_1">Descubra Modelos Incríveis</string>
+    <string name="onboarding_desc_1">Explore uma seleção exclusiva de modelos profissionais do mundo todo. Encontre a combinação perfeita para seu próximo projeto.</string>
 
-    <!-- User Type Selection -->
-    <string name="select_user_type">I am a…</string>
-    <string name="user_type_model">Model</string>
-    <string name="user_type_contractor">Contractor</string>
-    <string name="user_type_model_desc">Showcase your talent and get hired</string>
-    <string name="user_type_contractor_desc">Find and hire professional models</string>
+    <string name="onboarding_title_2">Conecte-se &amp; Colabore</string>
+    <string name="onboarding_desc_2">Converse diretamente com modelos ou contratantes, discuta projetos e construa relações profissionais duradouras.</string>
+
+    <string name="onboarding_title_3">Contrate com Confiança</string>
+    <string name="onboarding_desc_3">Gerencie contratações, contratos e desenvolva sua carreira ou marca na indústria da moda.</string>
+
+    <string name="onboarding_get_started">Começar</string>
+    <string name="onboarding_next">Próximo</string>
+    <string name="onboarding_skip">Pular</string>
+
+    <!-- User Type -->
+    <string name="select_user_type">Eu sou…</string>
+
+    <string name="user_type_model">Modelo</string>
+    <string name="user_type_contractor">Contratante</string>
+
+    <string name="user_type_model_desc">Mostre seu talento e seja contratada</string>
+    <string name="user_type_contractor_desc">Encontre e contrate modelos profissionais</string>
 
     <!-- Auth -->
-    <string name="login">Sign In</string>
-    <string name="register">Create Account</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="full_name">Full Name</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="no_account">Don\'t have an account?</string>
-    <string name="has_account">Already have an account?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="sign_in">Sign In</string>
-    <string name="welcome_back">Welcome Back</string>
-    <string name="create_your_account">Create Your Account</string>
-    <string name="or_continue_with">Or continue with</string>
+    <string name="login">Entrar</string>
+    <string name="register">Criar Conta</string>
+
+    <string name="forgot_password">Esqueceu a senha?</string>
+
+    <string name="no_account">Não possui uma conta?</string>
+    <string name="has_account">Já possui uma conta?</string>
+
+    <string name="sign_up">Cadastrar</string>
+    <string name="sign_in">Entrar</string>
+
+    <string name="welcome_back">Bem-vinda de volta</string>
+    <string name="create_your_account">Crie sua conta</string>
+
+    <string name="or_continue_with">Ou continue com</string>
 
     <!-- Home -->
-    <string name="home">Home</string>
-    <string name="search_models">Search models…</string>
-    <string name="featured">Featured</string>
-    <string name="trending">Trending</string>
-    <string name="recommended">Recommended For You</string>
-    <string name="categories">Categories</string>
-    <string name="see_all">See All</string>
+    <string name="search_models">Buscar modelos…</string>
+
+    <string name="featured">Destaques</string>
+    <string name="trending">Em Alta</string>
+    <string name="recommended">Recomendados Para Você</string>
+    <string name="categories">Categorias</string>
 
     <!-- Categories -->
-    <string name="cat_fashion">Fashion</string>
-    <string name="cat_commercial">Commercial</string>
+    <string name="cat_fashion">Moda</string>
+    <string name="cat_commercial">Comercial</string>
     <string name="cat_editorial">Editorial</string>
-    <string name="cat_runway">Runway</string>
+    <string name="cat_runway">Passarela</string>
     <string name="cat_fitness">Fitness</string>
     <string name="cat_glamour">Glamour</string>
     <string name="cat_plus_size">Plus Size</string>
-    <string name="cat_parts">Parts</string>
-
-    <!-- Profile -->
-    <string name="biography">Biography</string>
-    <string name="physical_characteristics">Physical Characteristics</string>
-    <string name="portfolio">Portfolio</string>
-    <string name="reviews">Reviews</string>
-    <string name="statistics">Statistics</string>
-    <string name="social_media">Social Media</string>
-    <string name="hire_model">Hire Model</string>
-    <string name="add_to_favorites">Add to Favorites</string>
-    <string name="remove_from_favorites">Remove from Favorites</string>
-    <string name="height">Height</string>
-    <string name="weight">Weight</string>
-    <string name="eye_color">Eye Color</string>
-    <string name="hair_color">Hair Color</string>
-    <string name="bust">Bust</string>
-    <string name="waist">Waist</string>
-    <string name="hips">Hips</string>
-    <string name="shoe_size">Shoe Size</string>
-    <string name="jobs_completed">Jobs</string>
-    <string name="rating">Rating</string>
-    <string name="followers">Followers</string>
+    <string name="cat_parts">Partes do Corpo</string>
 
     <!-- Search -->
-    <string name="search">Search</string>
-    <string name="filter">Filter</string>
-    <string name="no_results">No results found</string>
-    <string name="search_hint">Search models, categories…</string>
-
-    <!-- Chat -->
-    <string name="chat">Messages</string>
-    <string name="type_message">Type a message…</string>
-    <string name="send">Send</string>
-    <string name="no_conversations">No conversations yet</string>
-
-    <!-- Favorites -->
-    <string name="favorites">Favorites</string>
-    <string name="no_favorites">No favorites yet</string>
-    <string name="favorites_subtitle">Your saved models</string>
+    <string name="no_results">Nenhum resultado encontrado</string>
 
     <!-- Settings -->
-    <string name="settings">Settings</string>
-    <string name="profile">Profile</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="notifications">Notifications</string>
-    <string name="privacy">Privacy</string>
-    <string name="help_support">Help &amp; Support</string>
-    <string name="about">About</string>
-    <string name="logout">Log Out</string>
-    <string name="membership">Membership</string>
-    <string name="membership_premium">Premium Member</string>
-    <string name="membership_desc">Unlock all features</string>
-    <string name="version">Version 1.0</string>
-    <string name="account">Account</string>
-    <string name="general">General</string>
-    <string name="dark_mode">Dark Mode</string>
-    <string name="language">Language</string>
+    <string name="membership">Assinatura</string>
+    <string name="membership_premium">Membro Premium</string>
+    <string name="membership_desc">Desbloqueie todos os recursos</string>
+
+    <string name="version">Versão 1.0</string>
+
+    <string name="account">Conta</string>
+    <string name="general">Geral</string>
+
+    <string name="language">Idioma</string>
 
     <!-- Hiring -->
-    <string name="hire_request_sent">Hire request sent!</string>
-    <string name="hire_details">Project Details</string>
-    <string name="hire_date">Date</string>
-    <string name="hire_location">Location</string>
-    <string name="hire_budget">Budget</string>
-    <string name="hire_description">Description</string>
-    <string name="submit_request">Submit Request</string>
+    <string name="hire_request_sent">Solicitação enviada!</string>
 
-    <!-- Bottom Navigation -->
-    <string name="nav_home">Home</string>
-    <string name="nav_search">Search</string>
-    <string name="nav_chat">Chat</string>
-    <string name="nav_favorites">Favorites</string>
-    <string name="nav_profile">Profile</string>
+    <string name="hire_details">Detalhes do Projeto</string>
+
+    <string name="hire_date">Data</string>
+    <string name="hire_location">Localização</string>
+    <string name="hire_budget">Orçamento</string>
+    <string name="hire_description">Descrição</string>
+
+    <string name="submit_request">Enviar Solicitação</string>
+
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="full_name">Nome Completo</string>
+    <string name="see_all">Ver Tudo</string>
+
+    <!-- Categories -->
+    <!-- Profile -->
+    <string name="biography">Biografia</string>
+    <string name="physical_characteristics">Características Fisicas</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="reviews">Avaliações</string>
+    <string name="statistics">Statistics</string>
+    <string name="social_media">Redes Sociais</string>
+    <string name="hire_model">Contratar</string>
+    <string name="add_to_favorites">Favoritar</string>
+    <string name="remove_from_favorites">Remover dos Favoritos</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="eye_color">Cor dos Olhos</string>
+    <string name="hair_color">Cor do Cabelo</string>
+    <string name="bust">Busto</string>
+    <string name="waist">Cintura</string>
+    <string name="hips">Quadril</string>
+    <string name="shoe_size">Calçado</string>
+    <string name="jobs_completed">Jobs</string>
+    <string name="rating">Avaliações</string>
+
+    <!-- Search -->
+    <string name="search">Pesquisa</string>
+    <string name="filter">Filtros</string>
+    <string name="search_hint">Buscar modelos, categorias…</string>
+
+    <!-- Chat -->
+    <string name="chat">Mensagens</string>
+    <string name="type_message">Digitar…</string>
+    <string name="send">Enviar</string>
+    <string name="no_conversations">Nada aqui ainda</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Favoritos</string>
+    <string name="no_favorites">Nada aqui ainda</string>
+    <string name="favorites_subtitle">Suas modelos salvas</string>
+
+    <!-- Settings -->
+    <string name="settings">Configurações</string>
+    <string name="profile">Perfil</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="notifications">Notificações</string>
+    <string name="privacy">Privacidade</string>
+    <string name="help_support">Ajuda &amp; Suporte</string>
+    <string name="about">Sobre</string>
+    <string name="logout">Sair</string>
+
 </resources>

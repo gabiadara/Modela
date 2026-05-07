@@ -5,55 +5,368 @@ import com.modela.app.data.model.*
 object MockDataProvider {
 
     fun getCategories(): List<Category> = listOf(
-        Category("1", "Fashion"), Category("2", "Commercial"), Category("3", "Editorial"),
-        Category("4", "Runway"), Category("5", "Fitness"), Category("6", "Glamour"),
-        Category("7", "Plus Size"), Category("8", "Parts")
+        Category("1", "Moda"), Category("2", "Comercial"),
+        Category("3", "Editorial"), Category("4", "Passarela"), Category("5", "Fitness"),
+        Category("6", "Glamour"), Category("7", "Plus Size"), Category("8", "Partes do Corpo")
     )
 
     fun getFeaturedModels(): List<ModelProfile> = listOf(
-        ModelProfile("1","Sophia Laurent","","Fashion","International fashion model with 8 years of experience in haute couture and editorial work.",4.9f,156,12400,"5'10\"","128 lbs","Green","Blonde","34\"","24\"","35\"","8",listOf()  ,mapOf("instagram" to "@sophialaurent"),false,"Paris, France"),
-        ModelProfile("2","Isabella Cruz","","Editorial","Award-winning editorial model featured in Vogue, Elle, and Harper's Bazaar.",4.8f,203,18900,"5'9\"","125 lbs","Brown","Dark Brown","33\"","23\"","34\"","7.5",listOf(),mapOf("instagram" to "@isabellacruz"),false,"New York, USA"),
-        ModelProfile("3","Amara Okafor","","Runway","Top runway model with experience at Milan, Paris, and New York Fashion Weeks.",4.7f,89,8700,"5'11\"","130 lbs","Brown","Black","34\"","25\"","36\"","9",listOf(),mapOf("instagram" to "@amaraokafor"),false,"London, UK"),
-        ModelProfile("4","Valentina Rossi","","Commercial","Versatile commercial model specializing in beauty, lifestyle, and luxury brands.",4.6f,178,15200,"5'8\"","122 lbs","Blue","Auburn","32\"","24\"","34\"","7",listOf(),mapOf("instagram" to "@valentinarossi"),false,"Milan, Italy"),
-        ModelProfile("5","Mei Lin","","Glamour","Renowned glamour model with a refined, sophisticated aesthetic and global appeal.",4.9f,134,21300,"5'7\"","118 lbs","Dark Brown","Black","33\"","23\"","33\"","6.5",listOf(),mapOf("instagram" to "@meilin"),false,"Tokyo, Japan")
+
+        ModelProfile(
+            "1",
+            "Sophia Laurent",
+            "",
+            "Moda",
+            "Modelo internacional de moda com 8 anos de experiência em alta-costura e trabalhos editoriais.",
+            4.9f,
+            156,
+            12400,
+            "1,78 m",
+            "58 kg",
+            "Verde",
+            "Loiro",
+            "86 cm",
+            "61 cm",
+            "89 cm",
+            "37",
+            listOf(),
+            mapOf("instagram" to "@sophialaurent"),
+            false,
+            "Blumenau, SC"
+        ),
+
+        ModelProfile(
+            "2",
+            "Isabella Cruz",
+            "",
+            "Editorial",
+            "Modelo editorial premiada, destaque em grandes revistas de moda.",
+            4.8f,
+            203,
+            18900,
+            "1,75 m",
+            "57 kg",
+            "Castanho",
+            "Castanho Escuro",
+            "84 cm",
+            "59 cm",
+            "87 cm",
+            "36",
+            listOf(),
+            mapOf("instagram" to "@isabellacruz"),
+            false,
+            "Balneário Camboriú, SC"
+        ),
+
+        ModelProfile(
+            "3",
+            "Amara Okafor",
+            "",
+            "Passarela",
+            "Modelo de passarela com experiência em eventos de moda nacionais e internacionais.",
+            4.7f,
+            89,
+            8700,
+            "1,80 m",
+            "59 kg",
+            "Castanho",
+            "Preto",
+            "86 cm",
+            "63 cm",
+            "91 cm",
+            "39",
+            listOf(),
+            mapOf("instagram" to "@amaraokafor"),
+            false,
+            "Itajaí, SC"
+        ),
+
+        ModelProfile(
+            "4",
+            "Valentina Rossi",
+            "",
+            "Comercial",
+            "Modelo comercial versátil especializada em beleza, lifestyle e marcas premium.",
+            4.6f,
+            178,
+            15200,
+            "1,73 m",
+            "55 kg",
+            "Azul",
+            "Ruivo",
+            "81 cm",
+            "61 cm",
+            "86 cm",
+            "35",
+            listOf(),
+            mapOf("instagram" to "@valentinarossi"),
+            false,
+            "Brusque, SC"
+        ),
+
+        ModelProfile(
+            "5",
+            "Mei Lin",
+            "",
+            "Glamour",
+            "Modelo glamour reconhecida pelo estilo sofisticado e elegante.",
+            4.9f,
+            134,
+            21300,
+            "1,70 m",
+            "53 kg",
+            "Castanho Escuro",
+            "Preto",
+            "84 cm",
+            "59 cm",
+            "84 cm",
+            "34",
+            listOf(),
+            mapOf("instagram" to "@meilin"),
+            false,
+            "Indaial, SC"
+        )
     )
 
     fun getTrendingModels(): List<ModelProfile> = listOf(
-        ModelProfile("6","Aria Petrova","","Fitness","Certified fitness model and wellness advocate with a passion for health campaigns.",4.5f,67,5400,"5'8\"","135 lbs","Grey","Platinum","35\"","26\"","36\"","8",location = "Moscow, Russia"),
-        ModelProfile("7","Luna Delgado","","Fashion","Rising star in the Latin American fashion scene with distinctive editorial style.",4.4f,42,3800,"5'9\"","124 lbs","Hazel","Brunette","33\"","24\"","35\"","7.5",location = "São Paulo, Brazil"),
-        ModelProfile("8","Freya Jensen","","Editorial","Scandinavian model with ethereal beauty, specializing in high-end fashion editorials.",4.6f,58,4200,"5'10\"","126 lbs","Blue","Strawberry Blonde","33\"","23\"","34\"","8.5",location = "Copenhagen, Denmark"),
-        ModelProfile("9","Zara Khan","","Runway","Dynamic runway presence with experience in both Eastern and Western fashion markets.",4.3f,73,6100,"5'11\"","132 lbs","Brown","Black","34\"","25\"","36\"","9",location = "Dubai, UAE"),
-        ModelProfile("10","Chloe Park","","Commercial","Versatile model with strong commercial appeal across beauty and tech sectors.",4.5f,91,7800,"5'7\"","120 lbs","Dark Brown","Brown","32\"","23\"","33\"","7",location = "Seoul, South Korea")
-    )
 
+        ModelProfile(
+            "6",
+            "Aria Petrova",
+            "",
+            "Fitness",
+            "Modelo fitness e defensora do bem-estar, especializada em campanhas esportivas.",
+            4.5f,
+            67,
+            5400,
+            "1,73 m",
+            "61 kg",
+            "Cinza",
+            "Platinado",
+            "89 cm",
+            "66 cm",
+            "91 cm",
+            "37",
+            location = "Pomerode, SC"
+        ),
+
+        ModelProfile(
+            "7",
+            "Luna Delgado",
+            "",
+            "Moda",
+            "Modelo em ascensão na cena fashion brasileira com estilo editorial marcante.",
+            4.4f,
+            42,
+            3800,
+            "1,75 m",
+            "56 kg",
+            "Avelã",
+            "Morena",
+            "84 cm",
+            "61 cm",
+            "89 cm",
+            "36",
+            location = "Gaspar, SC"
+        ),
+
+        ModelProfile(
+            "8",
+            "Freya Jensen",
+            "",
+            "Editorial",
+            "Modelo editorial especializada em campanhas de moda premium.",
+            4.6f,
+            58,
+            4200,
+            "1,78 m",
+            "57 kg",
+            "Azul",
+            "Loiro Avermelhado",
+            "84 cm",
+            "59 cm",
+            "86 cm",
+            "38",
+            location = "Timbó, SC"
+        ),
+
+        ModelProfile(
+            "9",
+            "Zara Khan",
+            "",
+            "Passarela",
+            "Presença forte nas passarelas e experiência em grandes campanhas.",
+            4.3f,
+            73,
+            6100,
+            "1,80 m",
+            "60 kg",
+            "Castanho",
+            "Preto",
+            "86 cm",
+            "63 cm",
+            "91 cm",
+            "39",
+            location = "Jaraguá do Sul, SC"
+        ),
+
+        ModelProfile(
+            "10",
+            "Chloe Park",
+            "",
+            "Comercial",
+            "Modelo versátil com destaque em campanhas de beleza e tecnologia.",
+            4.5f,
+            91,
+            7800,
+            "1,70 m",
+            "54 kg",
+            "Castanho Escuro",
+            "Castanho",
+            "81 cm",
+            "59 cm",
+            "84 cm",
+            "35",
+            location = "Rio do Sul, SC"
+        )
+    )
     fun getRecommendedModels(): List<ModelProfile> = getFeaturedModels().shuffled()
 
     fun getConversations(): List<ChatConversation> = listOf(
-        ChatConversation("c1","Sophia Laurent","","Hey! I'd love to discuss the upcoming shoot details.  When would be a good time?",System.currentTimeMillis() - 300_000,2),
-        ChatConversation("c2","Isabella Cruz","","Thank you for considering me for the project! I'm very interested.",System.currentTimeMillis() - 3_600_000,0),
-        ChatConversation("c3","Amara Okafor","","The contract looks great. I'll review it and get back to you today.",System.currentTimeMillis() - 7_200_000,1),
-        ChatConversation("c4","Valentina Rossi","","Looking forward to our collaboration! See you at the studio.",System.currentTimeMillis() - 86_400_000,0)
+        ChatConversation(
+            "c1",
+            "Sophia Laurent",
+            "",
+            "Oi! Gostaria de conversar sobre os detalhes do próximo ensaio. Qual seria um bom horário?",
+            System.currentTimeMillis() - 300_000,
+            2
+        ),
+
+        ChatConversation(
+            "c2",
+            "Isabella Cruz",
+            "",
+            "Obrigada por me considerar para o projeto! Tenho muito interesse.",
+            System.currentTimeMillis() - 3_600_000,
+            0
+        ),
+
+        ChatConversation(
+            "c3",
+            "Amara Okafor",
+            "",
+            "O contrato parece ótimo. Vou revisar e retorno ainda hoje.",
+            System.currentTimeMillis() - 7_200_000,
+            1
+        ),
+
+        ChatConversation(
+            "c4",
+            "Valentina Rossi",
+            "",
+            "Ansiosa pela nossa colaboração! Nos vemos no estúdio.",
+            System.currentTimeMillis() - 86_400_000,
+            0
+        )
     )
 
     fun getMessages(conversationId: String): List<ChatMessage> {
         val now = System.currentTimeMillis()
+
         return listOf(
-            ChatMessage("m1", conversationId, "other", "Hi! Thank you for reaching out.", now - 7_200_000, false),
-            ChatMessage("m2", conversationId, "me", "Hello! I really loved your portfolio. Would you be available for a fashion shoot next month?", now - 7_100_000, true),
-            ChatMessage("m3", conversationId, "other", "That sounds wonderful! I'd love to hear more about the project details.", now - 6_000_000, false),
-            ChatMessage("m4", conversationId, "me", "It's a luxury brand campaign. 3-day shoot in Milan. We'll cover travel and accommodation.", now - 5_900_000, true),
-            ChatMessage("m5", conversationId, "other", "Milan sounds amazing! What dates are you considering?", now - 3_600_000, false),
-            ChatMessage("m6", conversationId, "me", "We're looking at March 15-17. Does that work for you?", now - 3_500_000, true),
-            ChatMessage("m7", conversationId, "other", "Let me check my schedule and get back to you shortly!", now - 1_800_000, false)
+            ChatMessage(
+                "m1",
+                conversationId,
+                "other",
+                "Oi! Obrigada por entrar em contato.",
+                now - 7_200_000,
+                false
+            ),
+
+            ChatMessage(
+                "m2",
+                conversationId,
+                "me",
+                "Olá! Adorei seu portfólio. Você teria disponibilidade para um ensaio de moda no próximo mês?",
+                now - 7_100_000,
+                true
+            ),
+
+            ChatMessage(
+                "m3",
+                conversationId,
+                "other",
+                "Parece incrível! Gostaria de saber mais detalhes sobre o projeto.",
+                now - 6_000_000,
+                false
+            ),
+
+            ChatMessage(
+                "m4",
+                conversationId,
+                "me",
+                "É uma campanha para uma marca de luxo. Sessão de 3 dias em Milão. Vamos cobrir viagem e hospedagem.",
+                now - 5_900_000,
+                true
+            ),
+
+            ChatMessage(
+                "m5",
+                conversationId,
+                "other",
+                "Milão parece maravilhoso! Quais datas vocês estão considerando?",
+                now - 3_600_000,
+                false
+            ),
+
+            ChatMessage(
+                "m6",
+                conversationId,
+                "me",
+                "Estamos planejando entre os dias 15 e 17 de março. Funciona para você?",
+                now - 3_500_000,
+                true
+            ),
+
+            ChatMessage(
+                "m7",
+                conversationId,
+                "other",
+                "Vou verificar minha agenda e te retorno em breve!",
+                now - 1_800_000,
+                false
+            )
         )
     }
 
     fun getReviews(): List<Review> = listOf(
-        Review("r1","James Rivera","",5f,"Absolutely professional! Sophia delivered beyond our expectations for the entire campaign. Her professionalism and versatility are unmatched.",System.currentTimeMillis() - 2_592_000_000),
-        Review("r2","Elena Vasquez","",4.5f,"Wonderful to work with. Great energy on set and very cooperative with the creative direction.",System.currentTimeMillis() - 5_184_000_000),
-        Review("r3","David Chen","",5f,"One of the best models we've ever hired. Incredible portfolio range and very punctual.",System.currentTimeMillis() - 7_776_000_000)
-    )
+        Review(
+            "r1",
+            "James Rivera",
+            "",
+            5f,
+            "Absolutamente profissional! Sophia superou nossas expectativas durante toda a campanha. Sua versatilidade é incomparável.",
+            System.currentTimeMillis() - 2_592_000_000
+        ),
 
+        Review(
+            "r2",
+            "Elena Vasquez",
+            "",
+            4.5f,
+            "Foi maravilhoso trabalhar com ela. Ótima energia no set e muito colaborativa com a direção criativa.",
+            System.currentTimeMillis() - 5_184_000_000
+        ),
+
+        Review(
+            "r3",
+            "David Chen",
+            "",
+            5f,
+            "Uma das melhores modelos que já contratamos. Portfólio incrível e extremamente pontual.",
+            System.currentTimeMillis() - 7_776_000_000
+        )
+    )
     fun getModelById(id: String): ModelProfile? {
         return (getFeaturedModels() + getTrendingModels()).find { it.id == id }
     }

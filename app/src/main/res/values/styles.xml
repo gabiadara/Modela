@@ -35,7 +35,8 @@
     <!-- Text Styles -->
     <style name="TextAppearance.Modela.Headline" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="android:textColor">@color/match_text_primary</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
+        <item name="android:textFontWeight">400</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
@@ -62,8 +63,8 @@
     </style>
 
     <style name="TextAppearance.Modela.Label" parent="TextAppearance.Material3.LabelMedium">
-        <item name="android:textColor">@color/match_gold</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/match_text_secondary</item>
+        <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textAllCaps">true</item>
     </style>

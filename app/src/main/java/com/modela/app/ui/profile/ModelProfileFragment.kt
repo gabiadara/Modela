@@ -29,15 +29,14 @@ class ModelProfileFragment : Fragment() {
         binding.tvCategory.text = "${model.category} • ${model.location}"
         binding.tvJobsCount.text = model.jobsCompleted.toString()
         binding.tvRating.text = model.rating.toString()
-        binding.tvFollowers.text = if (model.followers > 1000) "${model.followers / 1000}K" else model.followers.toString()
         binding.tvBio.text = model.bio
 
         // Physical characteristics as simple list
         val chars = listOf(
-            "Height" to model.height, "Weight" to model.weight,
-            "Eyes" to model.eyeColor, "Hair" to model.hairColor,
-            "Bust" to model.bust, "Waist" to model.waist,
-            "Hips" to model.hips, "Shoes" to model.shoeSize
+            "Altura" to model.height, "Peso" to model.weight,
+            "Olhod" to model.eyeColor, "Cabelo" to model.hairColor,
+            "Busto" to model.bust, "Cintura" to model.waist,
+            "Quadril" to model.hips, "Calçado" to model.shoeSize
         ).filter { it.second.isNotEmpty() }
         binding.rvCharacteristics.adapter = CharacteristicsAdapter(chars)
 
