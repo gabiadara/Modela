@@ -7,6 +7,8 @@
     android:gravity="center"
     android:paddingHorizontal="@dimen/spacing_lg"
     android:layout_marginEnd="@dimen/spacing_sm"
-    android:textColor="@color/match_text_primary"
-    android:textSize="@dimen/text_caption"
-    android:fontFamily="sans-serif-medium" />
+    android:textColor="@color/match_text_hint"
+    android:textSize="10sp"
+    android:textAllCaps="true"
+    android:textFontWeight="800"
+    android:fontFamily="@font/montserrat_variablefont_wght" />

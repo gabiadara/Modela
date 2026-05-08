@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.modela.app.R
 import com.modela.app.data.repository.MockDataProvider
 import com.modela.app.databinding.FragmentModelProfileBinding
+import com.modela.app.util.loadImage
 
 class ModelProfileFragment : Fragment() {
     private var _binding: FragmentModelProfileBinding? = null
@@ -30,11 +31,12 @@ class ModelProfileFragment : Fragment() {
         binding.tvJobsCount.text = model.jobsCompleted.toString()
         binding.tvRating.text = model.rating.toString()
         binding.tvBio.text = model.bio
+        binding.tvImg.loadImage(model.profileImageUrl)
 
         // Physical characteristics as simple list
         val chars = listOf(
             "Altura" to model.height, "Peso" to model.weight,
-            "Olhod" to model.eyeColor, "Cabelo" to model.hairColor,
+            "Olhos" to model.eyeColor, "Cabelo" to model.hairColor,
             "Busto" to model.bust, "Cintura" to model.waist,
             "Quadril" to model.hips, "Calçado" to model.shoeSize
         ).filter { it.second.isNotEmpty() }

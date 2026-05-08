@@ -140,14 +140,15 @@
                     android:text="@string/featured"
                     style="@style/TextAppearance.Modela.Label" />
 
-                <TextView
-                    android:id="@+id/tvSeeAllFeatured"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/see_all"
-                    android:textColor="@color/match_gold"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tvSeeAllFeatured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                style="@style/TextAppearance.Modela.Label"
+                android:textColor="@color/match_text_hint"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvFeatured"
@@ -175,14 +176,15 @@
                     android:text="@string/trending"
                     style="@style/TextAppearance.Modela.Label" />
 
-                <TextView
-                    android:id="@+id/tvSeeAllTrending"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/see_all"
-                    android:textColor="@color/match_gold"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tvSeeAllTrending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                style="@style/TextAppearance.Modela.Label"
+                android:textColor="@color/match_text_hint"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTrending"

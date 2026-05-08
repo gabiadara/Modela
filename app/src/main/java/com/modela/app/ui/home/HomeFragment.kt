@@ -1,6 +1,7 @@
 package com.modela.app.ui.home
 
 import android.graphics.Typeface
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.modela.app.R
 import com.modela.app.data.model.JobOpening
 import com.modela.app.databinding.FragmentHomeBinding
@@ -113,6 +115,11 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.action_home_to_modelProfile, bundle)
             }
             binding.rvRecommended.adapter = recommendedAdapter
+            val spacing = resources.getDimensionPixelSize(R.dimen.spacing_md)
+
+            binding.rvRecommended.addItemDecoration(
+                GridSpacingItemDecoration(2, spacing)
+            )
         }
     }
 
@@ -208,5 +215,31 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    class GridSpacingItemDecoration(
+        private val spanCount: Int,
+        private val spacing: Int
+    ) : RecyclerView.ItemDecoration() {
+
+        override fun getItemOffsets(
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
+
+            val position = parent.getChildAdapterPosition(view)
+            val column = position % spanCount
+
+            outRect.left = spacing - column * spacing / spanCount
+            outRect.right = (column + 1) * spacing / spanCount
+
+            // Espaçamento vertical
+            if (position >= spanCount) {
+                outRect.top = spacing
+            }
+
+            outRect.bottom = spacing
+        }
     }
 }
