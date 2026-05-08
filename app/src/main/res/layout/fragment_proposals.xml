@@ -16,15 +16,34 @@
         android:orientation="vertical"
         android:padding="@dimen/spacing_xl">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
         <TextView
             android:id="@+id/tvHeaderKicker"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:letterSpacing="0"
+            android:layout_weight="1"
             android:text="Castings"
             android:textColor="@color/match_text_secondary"
             android:textSize="@dimen/text_caption" />
+        <TextView
+            android:id="@+id/tvProposalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_proposal_count_pill"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:minWidth="88dp"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:textColor="@color/match_white"
+            android:textSize="@dimen/text_small" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,17 +60,6 @@
                 android:layout_weight="1"
                 android:text="Propostas" />
 
-            <TextView
-                android:id="@+id/tvProposalCount"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:background="@drawable/bg_proposal_count_pill"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:minWidth="88dp"
-                android:paddingHorizontal="@dimen/spacing_md"
-                android:textColor="@color/match_white"
-                android:textSize="@dimen/text_small" />
         </LinearLayout>
 
         <TextView

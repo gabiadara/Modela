@@ -18,31 +18,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
 
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="20dp"
 
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
-
-        android:elevation="18dp"
-        android:background="@drawable/bg_card_obsidian"
-
-        app:itemIconSize="24dp"
-        app:itemIconTint="@color/selector_bottom_nav_color"
-
-        app:labelVisibilityMode="unlabeled"
-        app:itemRippleColor="@color/match_ripple"
-        app:itemActiveIndicatorStyle="@null"
-        app:menu="@menu/bottom_nav_menu"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="18dp"
+        app:cardBackgroundColor="@color/match_obsidian"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+
+            android:background="@android:color/transparent"
+
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+
+            app:itemIconSize="24dp"
+            app:itemIconTint="@color/selector_bottom_nav_color"
+            app:labelVisibilityMode="unlabeled"
+            app:itemRippleColor="@color/match_ripple"
+            app:itemActiveIndicatorStyle="@null"
+            app:menu="@menu/bottom_nav_menu"/>
+
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,9 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_xl"
         android:layout_marginBottom="@dimen/spacing_lg"
-        app:cardBackgroundColor="@color/match_surface_elevated"
+        app:cardBackgroundColor="@color/match_surface"
         app:cardCornerRadius="@dimen/radius_lg"
-        app:cardElevation="@dimen/elevation_card"
         app:strokeColor="@color/match_card_border"
         app:strokeWidth="1dp">
 
@@ -83,19 +82,6 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabCastingStages"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginBottom="@dimen/spacing_md"
-        android:background="@color/match_obsidian"
-        app:tabIndicatorColor="@color/match_text_primary"
-        app:tabIndicatorFullWidth="false"
-        app:tabMode="scrollable"
-        app:tabRippleColor="@color/match_ripple"
-        app:tabSelectedTextColor="@color/match_text_primary"
-        app:tabTextColor="@color/match_text_hint" />
-
     <LinearLayout
         android:id="@+id/stepperContainer"
         android:layout_width="match_parent"
@@ -113,7 +99,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="1\nInscrito"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/stepFavoritos"
@@ -124,6 +112,8 @@
             android:gravity="center"
             android:text="2\nFavoritos"
             android:textSize="@dimen/text_small" />
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/stepCasting"
@@ -133,7 +123,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="3\nCasting"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/stepAprovado"
@@ -143,7 +135,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="4\nAprovado"
-            android:textSize="@dimen/text_small" />
+            android:textSize="@dimen/text_small"
+            android:clickable="true"
+            android:focusable="true"/>
     </LinearLayout>
 
     <LinearLayout
@@ -168,13 +162,6 @@
                 android:textColor="@color/match_text_primary"
                 android:textSize="@dimen/text_body" />
 
-            <TextView
-                android:id="@+id/tvStageSubtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xxs"
-                android:textColor="@color/match_text_secondary"
-                android:textSize="@dimen/text_small" />
         </LinearLayout>
 
         <TextView

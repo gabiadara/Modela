@@ -61,10 +61,28 @@ class CampaignCandidatesFragment : Fragment() {
             "${campaign?.type ?: "Campanha"} - funil de casting em tempo real"
 
         buildPipeline()
-        setupTabs()
         setupList()
         setupDemoButtons()
         renderStage(CastingStage.INSCRITO)
+        setupStepperClicks()
+    }
+
+    private fun setupStepperClicks() {
+        binding.stepInscrito.setOnClickListener {
+            renderStage(CastingStage.INSCRITO)
+        }
+
+        binding.stepFavoritos.setOnClickListener {
+            renderStage(CastingStage.FAVORITOS)
+        }
+
+        binding.stepCasting.setOnClickListener {
+            renderStage(CastingStage.CASTING)
+        }
+
+        binding.stepAprovado.setOnClickListener {
+            renderStage(CastingStage.APROVADO)
+        }
     }
 
     private fun buildPipeline() {
@@ -82,22 +100,6 @@ class CampaignCandidatesFragment : Fragment() {
             }
         )
     }
-
-    private fun setupTabs() {
-        CastingStage.values().forEach { stage ->
-            binding.tabCastingStages.addTab(binding.tabCastingStages.newTab().setText(stage.tabTitle))
-        }
-
-        binding.tabCastingStages.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                renderStage(CastingStage.values()[tab.position])
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab) = Unit
-            override fun onTabReselected(tab: TabLayout.Tab) = Unit
-        })
-    }
-
     private fun setupList() {
         binding.rvCandidates.layoutManager = LinearLayoutManager(requireContext())
         binding.rvCandidates.adapter = candidateAdapter
@@ -156,12 +158,7 @@ class CampaignCandidatesFragment : Fragment() {
     ) {
         candidate.stage = targetStage
 
-        val targetTab = binding.tabCastingStages.getTabAt(targetStage.ordinal)
-        if (targetTab?.isSelected == true) {
-            renderStage(targetStage)
-        } else {
-            targetTab?.select()
-        }
+        renderStage(targetStage)
 
         binding.rvCandidates.translationX = -32.dp() * direction
         binding.rvCandidates.alpha = 0f
@@ -185,7 +182,6 @@ class CampaignCandidatesFragment : Fragment() {
 
         candidateAdapter.submitCandidates(visibleItems)
         binding.tvStageTitle.text = stage.label
-        binding.tvStageSubtitle.text = stage.subtitle
         binding.tvStageCount.text = visibleItems.size.toString()
         binding.tvPipelineCount.text = "${pipelineItems.size} perfis no funil"
 
@@ -193,16 +189,8 @@ class CampaignCandidatesFragment : Fragment() {
         binding.rvCandidates.visibility = if (visibleItems.isEmpty()) View.GONE else View.VISIBLE
         binding.tvEmptyList.text = "Nenhum perfil em ${stage.label.lowercase()}."
 
-        updateTabs()
         updateStepper(stage)
         updateDemoButtonState(visibleItems.isNotEmpty())
-    }
-
-    private fun updateTabs() {
-        CastingStage.values().forEachIndexed { index, stage ->
-            val count = pipelineItems.count { it.stage == stage }
-            binding.tabCastingStages.getTabAt(index)?.text = "${stage.tabTitle}  $count"
-        }
     }
 
     private fun updateStepper(stage: CastingStage) {
