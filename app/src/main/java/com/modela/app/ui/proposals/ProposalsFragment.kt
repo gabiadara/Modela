@@ -127,10 +127,9 @@ class ProposalsFragment : Fragment() {
     private fun setupFilters() {
         if (isCompany) return
 
-        selectedChip = binding.chipAll
-        highlightChip(binding.chipAll)
+        selectedChip = binding.chipPending
+        highlightChip(binding.chipPending)
 
-        binding.chipAll.setOnClickListener { selectFilter(binding.chipAll, null) }
         binding.chipPending.setOnClickListener {
             selectFilter(binding.chipPending, ProposalStatus.PENDING)
         }

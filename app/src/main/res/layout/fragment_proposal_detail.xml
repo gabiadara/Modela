@@ -348,6 +348,28 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_lg"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnEmergency"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_reject"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Emergencia"
+                android:textColor="@color/match_error"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+
         <!-- Payment Summary -->
         <TextView
             android:layout_width="wrap_content"

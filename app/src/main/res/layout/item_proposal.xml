@@ -95,17 +95,6 @@
             android:textColor="@color/match_text_primary"
             android:textSize="@dimen/text_subtitle" />
 
-        <TextView
-            android:id="@+id/tvJobDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_xs"
-            android:ellipsize="end"
-            android:lineSpacingExtra="3dp"
-            android:maxLines="2"
-            android:textColor="@color/match_text_secondary"
-            android:textSize="@dimen/text_caption" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,26 +143,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_lg"
-            android:background="@drawable/bg_proposals_header"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="@dimen/spacing_lg"
+            android:padding="10dp"
             android:visibility="gone">
-
-            <TextView
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/bg_proposal_action_secondary"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:text="..."
-                android:textColor="@color/match_text_primary"
-                android:textSize="@dimen/text_body" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/spacing_md"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -182,8 +159,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:text="Em analise"
-                    android:textColor="@color/match_text_primary"
-                    android:textSize="@dimen/text_body" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="14dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -229,95 +206,7 @@
                     android:gravity="center"
                     android:paddingHorizontal="@dimen/spacing_md"
                     android:text="Confirmado"
-                    android:textColor="@color/match_success"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_md"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvJourneyDate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/spacing_sm"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_proposal_action_secondary"
-                    android:fontFamily="sans-serif-medium"
-                    android:padding="@dimen/spacing_md"
-                    android:textColor="@color/match_text_primary"
-                    android:textSize="@dimen/text_small" />
-
-                <TextView
-                    android:id="@+id/tvJourneyLocation"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/spacing_sm"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_proposal_action_secondary"
-                    android:ellipsize="end"
-                    android:fontFamily="sans-serif-medium"
-                    android:maxLines="2"
-                    android:padding="@dimen/spacing_md"
-                    android:textColor="@color/match_text_primary"
-                    android:textSize="@dimen/text_small" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvJourneyHint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_md"
-                android:text="Check-in recomendado 30 min antes. Avise a equipe se o deslocamento atrasar."
-                android:textColor="@color/match_text_secondary"
-                android:textSize="@dimen/text_small" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_lg"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/btnAddReminder"
-                    android:layout_width="0dp"
-                    android:layout_height="42dp"
-                    android:layout_marginEnd="@dimen/spacing_sm"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_proposal_action_primary"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="Lembrete"
-                    android:textColor="@color/match_white"
-                    android:textSize="@dimen/text_small" />
-
-                <TextView
-                    android:id="@+id/btnOpenRoute"
-                    android:layout_width="0dp"
-                    android:layout_height="42dp"
-                    android:layout_marginHorizontal="@dimen/spacing_xs"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_proposal_action_secondary"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="Rota"
-                    android:textColor="@color/match_text_primary"
-                    android:textSize="@dimen/text_small" />
-
-                <TextView
-                    android:id="@+id/btnEmergency"
-                    android:layout_width="0dp"
-                    android:layout_height="42dp"
-                    android:layout_marginStart="@dimen/spacing_sm"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_button_reject"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="Emergencia"
-                    android:textColor="@color/match_error"
+                    android:textColor="@color/match_text_secondary"
                     android:textSize="@dimen/text_small" />
             </LinearLayout>
 
@@ -339,9 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_lg"
-            android:background="@drawable/bg_proposals_header"
             android:orientation="vertical"
-            android:padding="@dimen/spacing_lg"
             android:visibility="gone">
 
             <TextView
@@ -351,80 +238,79 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="Job concluido"
                 android:textColor="@color/match_text_primary"
-                android:textSize="@dimen/text_body" />
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/tvCompletedSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_xs"
-                android:text="Avalie a experiencia, registre o resultado e acompanhe o fechamento financeiro."
+                android:text="Avalie a experiencia"
                 android:textColor="@color/match_text_secondary"
                 android:textSize="@dimen/text_small" />
 
             <LinearLayout
                 android:id="@+id/ratingPreview"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_md"
-                android:background="@drawable/bg_proposal_action_primary"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/star1"
                     android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/spacing_xs"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="★"
-                    android:textColor="@color/match_white"
-                    android:textSize="34sp" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/star2"
                     android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/spacing_xs"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="★"
-                    android:textColor="@color/match_white"
-                    android:textSize="34sp" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/star3"
                     android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/spacing_xs"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="★"
-                    android:textColor="@color/match_white"
-                    android:textSize="34sp" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/star4"
                     android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/spacing_xs"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="★"
-                    android:textColor="@color/match_white"
-                    android:textSize="34sp" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/star5"
                     android:layout_width="42dp"
-                    android:layout_height="42dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/spacing_xs"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="★"
-                    android:textColor="@color/match_white"
-                    android:textSize="34sp" />
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="30sp" />
             </LinearLayout>
 
             <LinearLayout

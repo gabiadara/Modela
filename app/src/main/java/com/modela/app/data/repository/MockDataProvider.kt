@@ -174,8 +174,8 @@ object MockDataProvider {
 
         ModelProfile(
             "8",
-            "Freya Jensen",
-            "",
+            "Ana Luiza",
+            "file:///android_asset/amigos/ana2.jpeg",
             "Editorial",
             "Modelo editorial especializada em campanhas de moda premium.",
             4.6f,
@@ -194,8 +194,8 @@ object MockDataProvider {
 
         ModelProfile(
             "9",
-            "Zara Khan",
-            "",
+            "Luisa de Paula",
+            "file:///android_asset/amigos/luisa.jpeg",
             "Passarela",
             "Presença forte nas passarelas e experiência em grandes campanhas.",
             4.3f,
@@ -214,8 +214,8 @@ object MockDataProvider {
 
         ModelProfile(
             "10",
-            "Chloe Park",
-            "",
+            "Maria Emanuelle",
+            "file:///android_asset/amigos/ana1.jpeg",
             "Comercial",
             "Modelo versátil com destaque em campanhas de beleza e tecnologia.",
             4.5f,

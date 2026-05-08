@@ -40,7 +40,6 @@ class ProposalAdapter(
 
             binding.tvProposalCategory.text = proposal.category
             binding.tvJobTitle.text = proposal.jobTitle
-            binding.tvJobDescription.text = proposal.jobDescription
             binding.tvProposalLocation.text = "Local: ${proposal.location}"
             binding.tvProposalDate.text = "Data: ${proposal.date}"
             binding.tvProposalBudget.text = proposal.budget
@@ -72,46 +71,12 @@ class ProposalAdapter(
 
         private fun bindAcceptedJourney(proposal: Proposal) {
             binding.acceptedJourneyPanel.visibility = View.VISIBLE
-            binding.tvJourneyDate.text = "Data\n${proposal.date}"
-            binding.tvJourneyLocation.text = "Local\n${proposal.location}"
             binding.tvJourneyStatus.text = proposal.acceptedStage.label
             binding.tvJourneyStatus.setTextColor(Color.parseColor(proposal.acceptedStage.colorHex))
-            binding.tvJourneyHint.text = if (proposal.acceptedStage.name == "SCOUTING") {
-                "Scouting confirmado. Prepare portfolio, rota e lembrete para a primeira conversa."
-            } else {
-                "Job confirmado. Check-in recomendado 30 min antes e equipe em modo acompanhamento."
-            }
             binding.btnAdvanceAcceptedStage.text = if (proposal.acceptedStage.name == "SCOUTING") {
                 "Avancar para Job"
             } else {
                 "Concluir Job"
-            }
-
-            binding.btnAddReminder.setOnClickListener {
-                pulse(it)
-                Toast.makeText(
-                    binding.root.context,
-                    "Lembrete visual criado para ${proposal.date}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            binding.btnOpenRoute.setOnClickListener {
-                pulse(it)
-                Toast.makeText(
-                    binding.root.context,
-                    "Rota preparada para ${proposal.location}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            binding.btnEmergency.setOnClickListener {
-                pulse(it)
-                Toast.makeText(
-                    binding.root.context,
-                    "Alerta enviado para contato de seguranca e equipe do job",
-                    Toast.LENGTH_SHORT
-                ).show()
             }
 
             binding.btnAdvanceAcceptedStage.setOnClickListener {
@@ -174,7 +139,7 @@ class ProposalAdapter(
             )
             val yellow = Color.parseColor("#F5C542")
             stars.forEachIndexed { index, star ->
-                star.setTextColor(if (index < rating) yellow else Color.WHITE)
+                star.setTextColor(if (index < rating) yellow else Color.parseColor("#FF8B8B8B"))
             }
             if (animate) pulse(binding.ratingPreview)
         }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="initial_age_range">
+        <item>18.0</item>
+        <item>40.0</item>
+    </array>
+    <array name="initial_height_range">
+        <item>160.0</item>
+        <item>185.0</item>
+    </array>
+</resources>

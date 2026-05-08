@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:layout_marginLeft="60dp"
         android:maxWidth="@dimen/chat_bubble_max_width"
         android:background="@drawable/bg_chat_bubble_sent"
         android:padding="@dimen/spacing_md"
@@ -16,13 +17,13 @@
             android:id="@+id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/match_text_primary"
+            android:textColor="@color/match_cream"
             android:textSize="@dimen/text_caption" />
         <TextView
             android:id="@+id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/match_text_hint"
+            android:textColor="@color/match_gold_light"
             android:textSize="10sp"
             android:layout_gravity="end"
             android:layout_marginTop="@dimen/spacing_xxs" />

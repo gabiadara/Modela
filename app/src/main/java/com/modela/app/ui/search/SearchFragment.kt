@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.modela.app.R
+import com.modela.app.ui.filter.FilterFragment
 import com.modela.app.databinding.FragmentSearchBinding
 import com.modela.app.ui.home.CategoryAdapter
 import com.modela.app.util.gone
@@ -56,6 +57,10 @@ class SearchFragment : Fragment() {
             }
             override fun afterTextChanged(s: Editable?) {}
         })
+        binding.btnFilter.setOnClickListener {
+            val bottomSheet = FilterFragment()
+            bottomSheet.show(parentFragmentManager, "FilterBottomSheet")
+        }
     }
 
     override fun onDestroyView() { super.onDestroyView(); _binding = null }

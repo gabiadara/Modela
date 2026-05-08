@@ -64,13 +64,13 @@
                     android:layout_height="32dp"
                     android:src="@drawable/ic_person"
                     android:contentDescription="Model"
-                    app:tint="@color/match_auth_link" />
+                    app:tint="@color/match_cream" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user_type_model"
-                    android:textColor="@color/match_text_primary"
+                    android:textColor="@color/match_cream"
                     android:textSize="@dimen/text_button"
                     android:fontFamily="sans-serif-medium"
                     android:layout_marginTop="@dimen/spacing_sm" />
@@ -92,13 +92,13 @@
                     android:layout_height="32dp"
                     android:src="@drawable/ic_star"
                     android:contentDescription="Contractor"
-                    app:tint="@color/match_auth_link" />
+                    app:tint="@color/match_cream" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user_type_contractor"
-                    android:textColor="@color/match_text_primary"
+                    android:textColor="@color/match_cream"
                     android:textSize="@dimen/text_button"
                     android:fontFamily="sans-serif-medium"
                     android:layout_marginTop="@dimen/spacing_sm" />

@@ -90,7 +90,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/ic_send"
                 android:contentDescription="@string/send"
-                app:tint="@color/match_obsidian" />
+                app:tint="@color/match_cream" />
         </FrameLayout>
     </LinearLayout>
 </LinearLayout>

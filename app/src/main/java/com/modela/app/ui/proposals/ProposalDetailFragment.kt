@@ -76,6 +76,30 @@ class ProposalDetailFragment : Fragment() {
         binding.btnOpenMap.setOnClickListener {
             Toast.makeText(requireContext(), "Abrindo localizacao...", Toast.LENGTH_SHORT).show()
         }
+
+        binding.btnEmergency.setOnClickListener {
+            pulse(it)
+            Toast.makeText(
+                binding.root.context,
+                "Alerta enviado para contato de seguranca e equipe do job",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    private fun pulse(view: View) {
+        view.animate()
+            .scaleX(0.96f)
+            .scaleY(0.96f)
+            .setDuration(80L)
+            .withEndAction {
+                view.animate()
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .setDuration(120L)
+                    .start()
+            }
+            .start()
     }
 
     private fun populateJobInfo(p: Proposal) {

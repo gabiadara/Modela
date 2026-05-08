@@ -15,31 +15,49 @@
         android:paddingHorizontal="@dimen/spacing_xl"
         android:paddingBottom="@dimen/spacing_lg" />
 
-    <!-- Search Input -->
-    <FrameLayout
+    <!-- Search Input and Filter -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/search_bar_height"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginHorizontal="@dimen/spacing_xl"
         android:layout_marginBottom="@dimen/spacing_lg"
-        android:background="@drawable/bg_search_bar">
+        android:gravity="center_vertical">
 
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
-            android:hint="@string/search_hint"
-            android:textColor="@color/match_text_primary"
-            android:textColorHint="@color/match_text_hint"
-            android:textSize="@dimen/text_caption"
-            android:paddingHorizontal="@dimen/spacing_lg"
-            android:drawableStart="@drawable/ic_search"
-            android:drawablePadding="@dimen/spacing_md"
-            android:drawableTint="@color/match_text_hint"
-            android:inputType="text"
-            android:imeOptions="actionSearch"
-            android:importantForAutofill="no" />
-    </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_bar_height"
+            android:layout_weight="1"
+            android:background="@drawable/bg_search_bar">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/search_hint"
+                android:textColor="@color/match_text_primary"
+                android:textColorHint="@color/match_text_hint"
+                android:textSize="@dimen/text_caption"
+                android:paddingHorizontal="@dimen/spacing_lg"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/spacing_md"
+                android:drawableTint="@color/match_text_hint"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnFilter"
+            android:layout_width="@dimen/search_bar_height"
+            android:layout_height="@dimen/search_bar_height"
+            android:layout_marginStart="@dimen/spacing_md"
+            android:background="@drawable/bg_search_bar"
+            android:src="@drawable/ic_filter_tune"
+            app:tint="@color/match_text_primary"
+            android:contentDescription="Filtros" />
+    </LinearLayout>
 
     <!-- Category Filters -->
     <androidx.recyclerview.widget.RecyclerView

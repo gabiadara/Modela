@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet_light">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Drag Handle / Header -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/match_divider"
+                android:layout_marginBottom="24dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    style="@style/TextAppearance.Modela.ScreenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filtros"
+                    android:textColor="@color/match_text_primary" />
+
+                <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/match_text_secondary"
+                    android:contentDescription="Close" />
+            </RelativeLayout>
+
+            <!-- Gênero -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gênero"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:singleSelection="false">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feminino"
+                    app:chipBackgroundColor="@color/color_filter_chip_bg"
+                    android:textColor="@color/color_filter_chip_text"
+                    app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino"
+                    app:chipBackgroundColor="@color/color_filter_chip_bg"
+                    android:textColor="@color/color_filter_chip_text"
+                    app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não-binário"
+                    app:chipBackgroundColor="@color/color_filter_chip_bg"
+                    android:textColor="@color/color_filter_chip_text"
+                    app:chipStrokeWidth="0dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Idade -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idade"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="4dp"
+                android:valueFrom="0"
+                android:valueTo="80.0"
+                android:stepSize="1.0"
+                app:values="@array/initial_age_range"
+
+                app:thumbColor="@color/match_surface"
+                app:thumbElevation="4dp"
+                app:thumbRadius="3dp"
+                app:haloColor="@color/match_text_primary"
+
+                app:trackHeight="4dp"
+                app:haloRadius="10dp"
+                app:trackColorActive="@color/match_text_primary"
+                app:trackColorInactive="@color/match_divider"
+
+                app:tickVisible="false"
+                app:labelBehavior="withinBounds"
+                app:labelStyle="@style/Widget.Material3.Slider.Label"
+                />
+
+            <!-- Altura -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altura (cm)"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsHeight"
+                android:valueFrom="140.0"
+                android:valueTo="220.0"
+                app:values="@array/initial_height_range"
+                android:stepSize="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:paddingHorizontal="4dp"
+
+                app:thumbColor="@color/match_surface"
+                app:thumbElevation="4dp"
+                app:thumbRadius="3dp"
+                app:haloColor="@color/match_text_primary"
+
+                app:trackHeight="4dp"
+                app:haloRadius="10dp"
+                app:trackColorActive="@color/match_text_primary"
+                app:trackColorInactive="@color/match_divider"
+
+                app:tickVisible="false"
+                app:labelBehavior="withinBounds"
+                app:labelStyle="@style/Widget.Material3.Slider.Label"
+
+                />
+
+            <!-- Cor dos Olhos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cor dos Olhos"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="12dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cgEyeColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true">
+                    <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Castanhos" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                    <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Azuis" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                    <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Verdes" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                    <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pretos" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                    <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mel" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!-- Categoria/Modelo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Passarela" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Editorial" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comercial" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plus Size" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+                <com.google.android.material.chip.Chip style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fitness" app:chipBackgroundColor="@color/color_filter_chip_bg" android:textColor="@color/color_filter_chip_text" app:chipStrokeWidth="0dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Tatuagens / Piercings -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/swTattoos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tatuagens"
+                    android:textStyle="bold"
+                    android:textColor="@color/match_text_primary" />
+
+                <Space android:layout_width="16dp" android:layout_height="wrap_content" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/swPiercings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Piercings"
+                    android:textStyle="bold"
+                    android:textColor="@color/match_text_primary" />
+            </LinearLayout>
+
+            <!-- Ordenação -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordenar por"
+                android:textStyle="bold"
+                android:textColor="@color/match_text_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/match_text_primary"
+                android:layout_marginBottom="24dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actSort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="Relevância"
+                    android:textColor="@color/match_text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/match_surface"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_insetEdge="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Limpar"
+            android:textColor="@color/match_text_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/match_text_primary"
+            android:textColor="@color/match_surface"
+            android:text="Aplicar" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
