@@ -12,10 +12,10 @@
     <!-- Button Styles -->
     <style name="Widget.Modela.Button.Gold" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/bg_button_gold</item>
-        <item name="android:textColor">@color/match_obsidian</item>
+        <item name="android:textColor">@color/match_white</item>
         <item name="android:textSize">@dimen/text_button</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:letterSpacing">0.08</item>
+        <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
+        <item name="android:textFontWeight">600</item>
         <item name="android:paddingTop">@dimen/spacing_md</item>
         <item name="android:paddingBottom">@dimen/spacing_md</item>
         <item name="backgroundTint">@null</item>
@@ -23,10 +23,10 @@
 
     <style name="Widget.Modela.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:background">@drawable/bg_button_outlined</item>
-        <item name="android:textColor">@color/match_gold</item>
+        <item name="android:textColor">@color/match_text_secondary</item>
         <item name="android:textSize">@dimen/text_button</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:letterSpacing">0.08</item>
+        <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
+        <item name="android:textFontWeight">600</item>
         <item name="android:paddingTop">@dimen/spacing_md</item>
         <item name="android:paddingBottom">@dimen/spacing_md</item>
         <item name="backgroundTint">@null</item>
@@ -49,7 +49,7 @@
         <item name="android:textColor">@color/match_text_primary</item>
         <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
         <item name="android:textFontWeight">400</item>
-        <item name="android:letterSpacing">0.02</item>
+        <item name="android:letterSpacing">-0.02</item>
     </style>
 
     <style name="TextAppearance.Modela.ScreenTitle" parent="TextAppearance.Material3.HeadlineLarge">

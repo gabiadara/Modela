@@ -107,7 +107,7 @@ object MockDataProvider {
         ModelProfile(
             "5",
             "Mei Lin",
-            "",
+            "file:///android_asset/amigos/isaac2.jpeg",
             "Glamour",
             "Modelo glamour reconhecida pelo estilo sofisticado e elegante.",
             5.0f,
@@ -133,7 +133,7 @@ object MockDataProvider {
         ModelProfile(
             "6",
             "Aria Petrova",
-            "",
+            "file:///android_asset/amigos/sofia2.jpeg",
             "Fitness",
             "Modelo fitness e defensora do bem-estar, especializada em campanhas esportivas.",
             4.5f,
@@ -153,7 +153,7 @@ object MockDataProvider {
         ModelProfile(
             "7",
             "Luna Delgado",
-            "",
+            "file:///android_asset/amigos/adara2.jpeg",
             "Moda",
             "Modelo em ascensão na cena fashion brasileira com estilo editorial marcante.",
             4.4f,

@@ -9,14 +9,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@color/match_text_hint"
-        android:textSize="@dimen/text_caption" />
+        android:textColor="@color/match_text_secondary"
+        android:textSize="@dimen/text_caption"
+        android:fontFamily="@font/montserrat_variablefont_wght"
+        android:textFontWeight="900"/>
     <TextView
         android:id="@+id/tvValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="@color/match_text_primary"
+        android:textColor="@color/match_text_hint"
         android:textSize="@dimen/text_caption"
-        android:fontFamily="sans-serif-medium" />
+        android:fontFamily="@font/montserrat_variablefont_wght"
+        android:textFontWeight="800" />
 </LinearLayout>

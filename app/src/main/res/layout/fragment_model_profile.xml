@@ -23,7 +23,8 @@
                 android:background="@drawable/bg_placeholder"
                 android:contentDescription="Model header" />
 
-            <View
+            <ImageView
+                android:id="@+id/tvImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_gradient_overlay" />
@@ -81,15 +82,18 @@
                     android:id="@+id/tvJobsCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/match_gold"
+                    android:textColor="@color/md_theme_secondary"
                     android:textSize="@dimen/text_title"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/montserrat_variablefont_wght" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/jobs_completed"
                     android:textColor="@color/match_text_secondary"
-                    android:textSize="@dimen/text_small" />
+                    android:textSize="@dimen/text_small"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/montserrat_variablefont_wght" />
             </LinearLayout>
 
             <View
@@ -107,15 +111,18 @@
                     android:id="@+id/tvRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/match_gold"
+                    android:textColor="@color/md_theme_secondary"
                     android:textSize="@dimen/text_title"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/montserrat_variablefont_wght"  />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rating"
                     android:textColor="@color/match_text_secondary"
-                    android:textSize="@dimen/text_small" />
+                    android:textSize="@dimen/text_small"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/montserrat_variablefont_wght" />
             </LinearLayout>
 
         </LinearLayout>
@@ -165,7 +172,9 @@
                 android:id="@+id/tvBio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/match_text_secondary"
+                android:textColor="@color/match_text_hint"
+                android:fontFamily="@font/montserrat_variablefont_wght"
+                android:textFontWeight="600"
                 android:textSize="@dimen/text_caption"
                 android:lineSpacingMultiplier="1.5" />
         </LinearLayout>

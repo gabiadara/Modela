@@ -125,7 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
-                android:textColor="@color/match_gold"
+                style="@style/TextAppearance.Modela.Label"
+                android:textColor="@color/match_text_hint"
                 android:textSize="@dimen/text_small" />
         </LinearLayout>
 
@@ -160,7 +161,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_all"
-                android:textColor="@color/match_gold"
+                style="@style/TextAppearance.Modela.Label"
+                android:textColor="@color/match_text_hint"
                 android:textSize="@dimen/text_small" />
         </LinearLayout>
 
@@ -186,8 +188,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvRecommended"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
             android:layout_marginBottom="70dp"
             android:clipToPadding="false"
             android:paddingHorizontal="@dimen/spacing_lg"
