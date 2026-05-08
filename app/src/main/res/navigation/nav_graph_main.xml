@@ -17,6 +17,13 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_home_to_jobOpeningDetail"
+            app:destination="@id/jobOpeningDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
 
     <fragment
@@ -79,6 +86,41 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_proposals_to_createCampaign"
+            app:destination="@id/createCampaignFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_proposals_to_campaignCandidates"
+            app:destination="@id/campaignCandidatesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createCampaignFragment"
+        android:name="com.modela.app.ui.proposals.CreateCampaignFragment"
+        android:label="Criar Campanha"
+        tools:layout="@layout/fragment_create_campaign">
+        <argument
+            android:name="campaignType"
+            app:argType="string"
+            android:defaultValue="Job" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/campaignCandidatesFragment"
+        android:name="com.modela.app.ui.proposals.CampaignCandidatesFragment"
+        android:label="Candidaturas"
+        tools:layout="@layout/fragment_campaign_candidates">
+        <argument
+            android:name="campaignId"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -119,4 +161,15 @@
             app:argType="string"
             android:defaultValue="" />
     </fragment>
+
+    <fragment
+        android:id="@+id/jobOpeningDetailFragment"
+        android:name="com.modela.app.ui.home.JobOpeningDetailFragment"
+        android:label="Detalhes da Vaga"
+        tools:layout="@layout/fragment_job_opening_detail">
+        <argument
+            android:name="jobId"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

@@ -3,9 +3,9 @@ package com.modela.app.ui.proposals
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.modela.app.data.model.AcceptedProposalStage
 import com.modela.app.data.model.Proposal
 import com.modela.app.data.model.ProposalStatus
-import com.modela.app.data.repository.MockDataProvider
 
 class ProposalsViewModel : ViewModel() {
 
@@ -22,8 +22,13 @@ class ProposalsViewModel : ViewModel() {
         loadProposals()
     }
 
+    fun refresh() {
+        loadProposals()
+        filterByStatus(currentFilter)
+    }
+
     private fun loadProposals() {
-        allProposals = MockDataProvider.getProposals()
+        allProposals = ProposalWorkflowStore.getProposals()
         _proposals.value = allProposals
         _filteredProposals.value = allProposals
     }
@@ -38,18 +43,22 @@ class ProposalsViewModel : ViewModel() {
     }
 
     fun acceptProposal(proposal: Proposal) {
-        allProposals = allProposals.map {
-            if (it.id == proposal.id) it.copy(status = ProposalStatus.ACCEPTED) else it
-        }
-        _proposals.value = allProposals
-        filterByStatus(currentFilter)
+        ProposalWorkflowStore.updateStatus(
+            proposal.id,
+            ProposalStatus.ACCEPTED,
+            AcceptedProposalStage.SCOUTING
+        )
+        refresh()
     }
 
     fun rejectProposal(proposal: Proposal) {
-        allProposals = allProposals.map {
-            if (it.id == proposal.id) it.copy(status = ProposalStatus.REJECTED) else it
-        }
-        _proposals.value = allProposals
-        filterByStatus(currentFilter)
+        ProposalWorkflowStore.reject(proposal.id)
+        refresh()
+    }
+
+    fun advanceAcceptedStage(proposal: Proposal): Proposal? {
+        val updated = ProposalWorkflowStore.advanceAcceptedStage(proposal.id)
+        refresh()
+        return updated
     }
 }

@@ -15,6 +15,7 @@ import com.modela.app.databinding.FragmentRegisterBinding
 import com.modela.app.ui.main.MainActivity
 import com.modela.app.util.Constants
 import com.modela.app.util.Resource
+import com.modela.app.util.UserTypeHelper
 import com.modela.app.util.gone
 import com.modela.app.util.visible
 
@@ -23,7 +24,7 @@ class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
     private val viewModel: AuthViewModel by viewModels()
-    private var selectedUserType = "model"
+    private var selectedUserType = UserTypeHelper.MODEL
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
@@ -33,10 +34,10 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        selectUserType("model")
+        selectUserType(UserTypeHelper.MODEL)
 
-        binding.cardModel.setOnClickListener { selectUserType("model") }
-        binding.cardContractor.setOnClickListener { selectUserType("contractor") }
+        binding.cardModel.setOnClickListener { selectUserType(UserTypeHelper.MODEL) }
+        binding.cardContractor.setOnClickListener { selectUserType(UserTypeHelper.CONTRACTOR) }
 
         binding.btnRegister.setOnClickListener {
             viewModel.register(
@@ -85,7 +86,7 @@ class RegisterFragment : Fragment() {
         selectedUserType = type
         val goldBorder = ContextCompat.getDrawable(requireContext(), R.drawable.bg_button_gold)
         val defaultBg = ContextCompat.getDrawable(requireContext(), R.drawable.bg_user_type_card)
-        if (type == "model") {
+        if (UserTypeHelper.isModel(type)) {
             binding.cardModel.background = goldBorder
             binding.cardContractor.background = defaultBg
         } else {

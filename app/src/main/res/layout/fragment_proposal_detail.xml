@@ -156,7 +156,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fluxo da Contratação"
+            android:text="Acompanhamento do Casting"
             android:textColor="@color/match_text_primary"
             android:textSize="@dimen/text_body"
             android:fontFamily="sans-serif-medium"
@@ -173,11 +173,50 @@
             app:cardBackgroundColor="@color/match_surface_elevated">
 
             <LinearLayout
-                android:id="@+id/timelineContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/spacing_xl" />
+                android:padding="@dimen/spacing_xl">
+
+                <LinearLayout
+                    android:id="@+id/timelineContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnTimelineBack"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_proposal_action_secondary"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Voltar etapa"
+                        android:textColor="@color/match_text_primary"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:id="@+id/btnTimelineNext"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="@dimen/spacing_sm"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_proposal_action_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Proxima etapa"
+                        android:textColor="@color/match_white"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Escrow Security Card -->

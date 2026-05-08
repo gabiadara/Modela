@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/match_obsidian"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/spacing_xxxl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_lg"
+        android:paddingBottom="@dimen/spacing_lg">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Voltar"
+            android:padding="@dimen/spacing_sm"
+            android:src="@drawable/ic_back"
+            app:tint="@color/match_text_primary" />
+
+        <TextView
+            style="@style/TextAppearance.Modela.ScreenTitle.Compact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Funil de Casting" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_xl"
+        android:layout_marginBottom="@dimen/spacing_lg"
+        app:cardBackgroundColor="@color/match_surface_elevated"
+        app:cardCornerRadius="@dimen/radius_lg"
+        app:cardElevation="@dimen/elevation_card"
+        app:strokeColor="@color/match_card_border"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xl">
+
+            <TextView
+                android:id="@+id/tvCampaignName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:textColor="@color/match_text_primary"
+                android:textSize="@dimen/text_subtitle" />
+
+            <TextView
+                android:id="@+id/tvCampaignSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:textColor="@color/match_text_secondary"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tvPipelineCount"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:background="@drawable/bg_model_home_filter_pill"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/spacing_md"
+                android:textColor="@color/match_text_primary"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabCastingStages"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/spacing_md"
+        android:background="@color/match_obsidian"
+        app:tabIndicatorColor="@color/match_text_primary"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@color/match_ripple"
+        app:tabSelectedTextColor="@color/match_text_primary"
+        app:tabTextColor="@color/match_text_hint" />
+
+    <LinearLayout
+        android:id="@+id/stepperContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_xl"
+        android:paddingBottom="@dimen/spacing_lg">
+
+        <TextView
+            android:id="@+id/stepInscrito"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1\nInscrito"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/stepShortlist"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="@dimen/spacing_xs"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2\nShortlist"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/stepCasting"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="@dimen/spacing_xs"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3\nCasting"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/stepAprovado"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="4\nAprovado"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_xl"
+        android:paddingBottom="@dimen/spacing_md">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/match_text_primary"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/tvStageSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:textColor="@color/match_text_secondary"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStageCount"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_proposal_count_pill"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:textColor="@color/match_white"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_xl"
+        android:paddingBottom="@dimen/spacing_lg">
+
+        <TextView
+            android:id="@+id/btnDemoBack"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="@dimen/spacing_sm"
+            android:layout_weight="1"
+            android:background="@drawable/bg_proposal_action_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Voltar etapa"
+            android:textColor="@color/match_text_primary"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/btnDemoAdvance"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="@dimen/spacing_sm"
+            android:layout_weight="1"
+            android:background="@drawable/bg_proposal_action_primary"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Avancar etapa"
+            android:textColor="@color/match_white"
+            android:textSize="@dimen/text_small" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptyList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/spacing_xxxl"
+        android:textColor="@color/match_text_secondary"
+        android:textSize="@dimen/text_caption"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCandidates"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="96dp" />
+</LinearLayout>

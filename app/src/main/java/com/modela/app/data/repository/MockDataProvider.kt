@@ -1,6 +1,8 @@
 package com.modela.app.data.repository
 
 import com.modela.app.data.model.*
+import com.modela.app.data.model.JobTag
+import com.modela.app.data.model.JobTagType
 
 object MockDataProvider {
 
@@ -371,12 +373,190 @@ object MockDataProvider {
         return (getFeaturedModels() + getTrendingModels()).find { it.id == id }
     }
 
+    fun getJobOpenings(): List<JobOpening> = listOf(
+        JobOpening(
+            id = "j1",
+            companyName = "Veyra Editorial",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/editorial_summer.jpg",
+            companyLocation = "São Paulo, SP",
+            jobTitle = "Ensaio Editorial Verão 2026",
+            jobDescription = "Buscamos modelo para ensaio fotográfico editorial da coleção verão 2026. Produção completa incluída.",
+            fullDescription = "Estamos selecionando modelos para o ensaio editorial da nossa próxima edição de moda — coleção Verão 2026. O trabalho inclui 2 dias de produção em estúdio profissional em São Paulo, com equipe completa de styling, maquiagem e fotografia. As fotos serão publicadas na edição impressa e digital da Veyra Editorial.\n\nO pagamento é feito via plataforma Modela com garantia de segurança escrow.",
+            category = "Editorial",
+            location = "Balneário Camboriú, SC",
+            date = "15 Jun 2026",
+            budget = "R$ 3.500",
+            tags = listOf(
+                JobTag("Urgente", JobTagType.URGENT),
+                JobTag("Editorial", JobTagType.CATEGORY),
+                JobTag("Verão", JobTagType.SEASON)
+            ),
+            requirements = listOf("Altura mínima 1,73m", "Experiência editorial", "Disponibilidade integral 2 dias"),
+            postedAt = System.currentTimeMillis() - 7_200_000,
+            applicants = 12
+        ),
+        JobOpening(
+            id = "j2",
+            companyName = "Luma Studio",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/winter_studio.jpg",
+            companyLocation = "Blumenau, SC",
+            jobTitle = "Campanha Moda de Inverno",
+            jobDescription = "Campanha fotográfica para coleção de inverno de marca premium. 2 dias em estúdio profissional.",
+            fullDescription = "Luma Studio está produzindo campanha da coleção Inverno 2026 para marca de moda premium nacional. Procuramos perfis sofisticados e versáteis para representar a identidade da marca.\n\nA produção acontece em nosso estúdio em Blumenau, com equipe completa. Todas as peças são cedidas durante as gravações.",
+            category = "Comercial",
+            location = "Blumenau, SC",
+            date = "22 Jun 2026",
+            budget = "R$ 5.000",
+            tags = listOf(
+                JobTag("Moda de Inverno", JobTagType.SEASON),
+                JobTag("Exclusivo", JobTagType.EXCLUSIVE),
+                JobTag("Comercial", JobTagType.CATEGORY)
+            ),
+            requirements = listOf("Perfil versátil", "Portfolio atualizado", "Disponibilidade 2 dias"),
+            postedAt = System.currentTimeMillis() - 3_600_000,
+            applicants = 8,
+            isRemote = false
+        ),
+        JobOpening(
+            id = "j3",
+            companyName = "Aurora Runway",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/runway_show.jpg",
+            companyLocation = "Itajaí, SC",
+            jobTitle = "Desfile Coleção Inverno — Passarela",
+            jobDescription = "Seleção de modelos para desfile da coleção de inverno no Aurora Runway 2026. Ensaio e passarela.",
+            fullDescription = "Aurora Runway seleciona modelos para o grande desfile de apresentação da coleção de Inverno 2026. O evento acontece no Centro de Convenções de Itajaí e reúne marcas independentes do estado.\n\nO casting inclui ensaio técnico 2 dias antes do evento. Todas as passagens e hospedagem fora de Itajaí serão custeadas pela produção.",
+            category = "Passarela",
+            location = "Itajaí, SC",
+            date = "10 Jul 2026",
+            budget = "R$ 2.800",
+            tags = listOf(
+                JobTag("Novo", JobTagType.NEW),
+                JobTag("Passarela", JobTagType.CATEGORY),
+                JobTag("Inverno", JobTagType.SEASON)
+            ),
+            requirements = listOf("Altura mínima 1,75m", "Experiência em passarela", "Disponível 10-12 Jul"),
+            postedAt = System.currentTimeMillis() - 1_800_000,
+            applicants = 23
+        ),
+        JobOpening(
+            id = "j4",
+            companyName = "Botanika Lab",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/skincare_beauty.jpg",
+            companyLocation = "Brusque, SC",
+            jobTitle = "Campanha Skincare — Botanika",
+            jobDescription = "Ensaio para lançamento de linha de produtos de beleza natural e sustentável. Campanha digital e impressa.",
+            fullDescription = "Botanika Lab lança sua nova linha de skincare sustentável e busca rostos autênticos para representar a campanha. Valorizamos diversidade e beleza real.\n\nO trabalho inclui sessão fotográfica de 1 dia e gravação de vídeos curtos para redes sociais. Todo o material produzido terá crédito da modelo.",
+            category = "Comercial",
+            location = "Brusque, SC",
+            date = "05 Jul 2026",
+            budget = "R$ 4.200",
+            tags = listOf(
+                JobTag("Exclusivo", JobTagType.EXCLUSIVE),
+                JobTag("Beleza", JobTagType.CATEGORY),
+                JobTag("Urgente", JobTagType.URGENT)
+            ),
+            requirements = listOf("Perfil natural/espontâneo", "Sem restrições de medidas", "Experiência com produtos"),
+            postedAt = System.currentTimeMillis() - 86_400_000,
+            applicants = 31
+        ),
+        JobOpening(
+            id = "j5",
+            companyName = "Altura Atelier",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/couture_lookbook.jpg",
+            companyLocation = "Florianópolis, SC",
+            jobTitle = "Lookbook Alta-Costura — Coleção Exclusiva",
+            jobDescription = "Produção de lookbook exclusivo para nova coleção de alta-costura. Locação externa em Florianópolis.",
+            fullDescription = "Altura Atelier apresenta sua nova coleção de alta-costura e convida modelos para um lookbook editorial em locações externas exclusivas em Florianópolis.\n\nO projeto tem 3 dias de produção em pontos icônicos da cidade. O fotógrafo é internacionalmente reconhecido e o material será licenciado para publicações internacionais.",
+            category = "Moda",
+            location = "Florianópolis, SC",
+            date = "20 Jul 2026",
+            budget = "R$ 6.000",
+            tags = listOf(
+                JobTag("Alta Costura", JobTagType.EXCLUSIVE),
+                JobTag("Novo", JobTagType.NEW),
+                JobTag("Moda", JobTagType.CATEGORY)
+            ),
+            requirements = listOf("Experiência editorial obrigatória", "Altura 1,75m+", "Portfolio profissional"),
+            postedAt = System.currentTimeMillis() - 172_800_000,
+            applicants = 5
+        ),
+        JobOpening(
+            id = "j6",
+            companyName = "Pulse Forma",
+            companyImageUrl = "",
+            campaignImageUrl = "file:///android_asset/campaigns/fitness_wellness.jpg",
+            companyLocation = "Joinville, SC",
+            jobTitle = "Ensaio Fitness & Wellness",
+            jobDescription = "Ensaio para capa e editorial interno de revista de lifestyle saudável. Ambiente externo ao ar livre.",
+            fullDescription = "Pulse Forma está produzindo sua edição especial de Inverno 2026 com foco em lifestyle e wellness. Buscamos modelos com perfil fitness para ensaio externo em parques e espaços naturais de Joinville.\n\nA edição será distribuída em todo o território nacional e terá versão digital com alcance internacional.",
+            category = "Fitness",
+            location = "Joinville, SC",
+            date = "18 Jun 2026",
+            budget = "R$ 2.200",
+            tags = listOf(
+                JobTag("Fitness", JobTagType.CATEGORY),
+                JobTag("Inverno", JobTagType.SEASON),
+                JobTag("Novo", JobTagType.NEW)
+            ),
+            requirements = listOf("Perfil fitness/esportivo", "Disponível meio período", "Experiência outdoor"),
+            postedAt = System.currentTimeMillis() - 259_200_000,
+            applicants = 17
+        )
+    )
+
+    fun getCompanyCampaigns(): List<CompanyCampaign> = listOf(
+        CompanyCampaign(
+            id = "c1",
+            title = "Editorial Verão 2026",
+            type = "Campanha",
+            coverImageUrl = "file:///android_asset/campaigns/editorial_summer.jpg",
+            description = "Produção editorial para catálogo e social media, com estética limpa e foco em moda premium.",
+            location = "São Paulo, SP",
+            date = "15 Jun 2026",
+            budget = "R$ 3.500",
+            status = "Recebendo perfis",
+            tags = listOf("Editorial", "Urgente", "Verão"),
+            applicants = 12
+        ),
+        CompanyCampaign(
+            id = "c2",
+            title = "Casting Skincare Natural",
+            type = "Casting",
+            coverImageUrl = "file:///android_asset/campaigns/skincare_beauty.jpg",
+            description = "Seleção de rostos para campanha de skincare com proposta natural e diversidade de perfis.",
+            location = "Brusque, SC",
+            date = "05 Jul 2026",
+            budget = "R$ 4.200",
+            status = "Triagem",
+            tags = listOf("Beleza", "Comercial", "Premium"),
+            applicants = 31
+        ),
+        CompanyCampaign(
+            id = "c3",
+            title = "Lookbook Alta-Costura",
+            type = "Job",
+            coverImageUrl = "file:///android_asset/campaigns/couture_lookbook.jpg",
+            description = "Lookbook externo para coleção autoral, com direção de arte sofisticada e peças de alto impacto.",
+            location = "Florianópolis, SC",
+            date = "20 Jul 2026",
+            budget = "R$ 6.000",
+            status = "Publicado",
+            tags = listOf("Moda", "Premium", "Editorial"),
+            applicants = 5
+        )
+    )
+
     fun getProposals(): List<Proposal> = listOf(
         Proposal(
             id = "p1",
             modelName = "Adara",
             modelImageUrl = "file:///android_asset/amigos/adara1.jpeg",
-            companyName = "Vogue Brasil",
+            companyName = "Veyra Editorial",
             companyImageUrl = "",
             jobTitle = "Ensaio Editorial Verão 2026",
             jobDescription = "Sessão fotográfica para coleção de verão. Produção completa com maquiagem e styling inclusos.",
@@ -390,7 +570,7 @@ object MockDataProvider {
             id = "p2",
             modelName = "Isaac",
             modelImageUrl = "file:///android_asset/amigos/isaac1.jpeg",
-            companyName = "Studio Luxe",
+            companyName = "Luma Studio",
             companyImageUrl = "",
             jobTitle = "Campanha Publicitária - Marca Premium",
             jobDescription = "Campanha fotográfica para marca de luxo. 2 dias de produção em estúdio profissional.",
@@ -404,7 +584,7 @@ object MockDataProvider {
             id = "p3",
             modelName = "Sofia",
             modelImageUrl = "file:///android_asset/amigos/sofia1.jpeg",
-            companyName = "Fashion Week SC",
+            companyName = "Aurora Runway",
             companyImageUrl = "",
             jobTitle = "Desfile Coleção Inverno",
             jobDescription = "Desfile de moda para apresentação da coleção de inverno. Ensaio e passarela.",
@@ -418,7 +598,7 @@ object MockDataProvider {
             id = "p4",
             modelName = "Giovana",
             modelImageUrl = "file:///android_asset/amigos/giovana1.jpeg",
-            companyName = "Beleza Natural Co.",
+            companyName = "Botanika Lab",
             companyImageUrl = "",
             jobTitle = "Campanha Skincare",
             jobDescription = "Ensaio para lançamento de linha de produtos de beleza natural e sustentável.",
@@ -432,7 +612,7 @@ object MockDataProvider {
             id = "p5",
             modelName = "Adara",
             modelImageUrl = "file:///android_asset/amigos/adara1.jpeg",
-            companyName = "Atelier Couture",
+            companyName = "Altura Atelier",
             companyImageUrl = "",
             jobTitle = "Lookbook Alta-Costura",
             jobDescription = "Produção de lookbook exclusivo para nova coleção de alta-costura. Locação externa.",

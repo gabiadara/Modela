@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCompanySpotlight"
+    android:layout_width="268dp"
+    android:layout_height="180dp"
+    android:layout_marginEnd="@dimen/spacing_md"
+    app:cardBackgroundColor="@color/match_surface_elevated"
+    app:cardCornerRadius="@dimen/radius_lg"
+    app:cardElevation="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivSpotlightCampaign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Campanha"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_placeholder" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_campaign_overlay" />
+
+        <LinearLayout
+            android:id="@+id/spotlightContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_lg">
+
+            <ImageView
+                android:id="@+id/ivSpotlightLogo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Logo da empresa" />
+
+            <TextView
+                android:id="@+id/tvSpotlightCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:textColor="@color/match_white"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/tvSpotlightTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxs"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#E8FFFFFF"
+                android:textSize="@dimen/text_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSpotlightBudget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_spotlight_budget"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spacing_md"
+                    android:textColor="@color/match_text_primary"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:id="@+id/tvSpotlightCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/spacing_sm"
+                    android:background="@drawable/bg_spotlight_category"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spacing_md"
+                    android:textColor="@color/match_white"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

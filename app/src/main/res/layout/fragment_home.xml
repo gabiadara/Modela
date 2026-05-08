@@ -12,14 +12,14 @@
         android:orientation="vertical"
         android:paddingTop="@dimen/spacing_xxxl">
 
-        <!-- Header -->
+        <!-- ═══════════════════════════ SHARED HEADER ═══════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingHorizontal="@dimen/spacing_xl"
-            android:paddingBottom="@dimen/spacing_lg">
+            android:paddingBottom="@dimen/spacing_xs">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -28,10 +28,20 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvHomeGreeting"
                     style="@style/TextAppearance.Modela.ScreenTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/app_name" />
+                    android:text="Modela" />
+
+                <TextView
+                    android:id="@+id/tvHomeSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxs"
+                    android:text="Encontre o modelo ideal"
+                    android:textColor="@color/match_text_secondary"
+                    android:textSize="@dimen/text_caption" />
             </LinearLayout>
 
             <ImageView
@@ -44,12 +54,13 @@
                 app:tint="@color/match_text_secondary" />
         </LinearLayout>
 
-        <!-- Search Bar -->
+        <!-- Search Bar (shared) -->
         <FrameLayout
             android:id="@+id/searchBarContainer"
             android:layout_width="match_parent"
             android:layout_height="@dimen/search_bar_height"
             android:layout_marginHorizontal="@dimen/spacing_xl"
+            android:layout_marginTop="@dimen/spacing_md"
             android:layout_marginBottom="@dimen/spacing_xl"
             android:background="@drawable/bg_search_bar">
 
@@ -68,6 +79,7 @@
                     app:tint="@color/match_text_hint" />
 
                 <TextView
+                    android:id="@+id/tvSearchHint"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/search_models"
@@ -77,122 +89,313 @@
             </LinearLayout>
         </FrameLayout>
 
-        <!-- Categories -->
+        <!-- Contratante feed -->
         <LinearLayout
+            android:id="@+id/layoutCompanyFeed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:paddingBottom="@dimen/spacing_md">
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            <TextView
-                android:layout_width="0dp"
+            <!-- Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/categories"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:paddingBottom="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/categories"
+                    style="@style/TextAppearance.Modela.Label" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Featured Models -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:paddingBottom="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/featured"
+                    style="@style/TextAppearance.Modela.Label" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllFeatured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/match_gold"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFeatured"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Trending Models -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:paddingBottom="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/trending"
+                    style="@style/TextAppearance.Modela.Label" />
+
+                <TextView
+                    android:id="@+id/tvSeeAllTrending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/match_gold"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTrending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <!-- Recommended -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:paddingBottom="@dimen/spacing_md"
                 style="@style/TextAppearance.Modela.Label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/spacing_lg"
+                android:paddingBottom="@dimen/spacing_lg"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCategories"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clipToPadding="false"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:layout_marginBottom="@dimen/spacing_xl"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-        <!-- Featured Models -->
+        <!-- Modelo feed -->
         <LinearLayout
+            android:id="@+id/layoutModelFeed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:paddingBottom="@dimen/spacing_md">
+            android:orientation="vertical"
+            android:visibility="gone">
 
-            <TextView
-                android:layout_width="0dp"
+            <HorizontalScrollView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/featured"
-                style="@style/TextAppearance.Modela.Label" />
+                android:layout_marginBottom="@dimen/spacing_lg"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:scrollbars="none">
 
-            <TextView
-                android:id="@+id/tvSeeAllFeatured"
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/opportunityFilterContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipOpportunityAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:background="@drawable/bg_home_filter_chip_active"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Todas"
+                        android:textColor="@color/match_white"
+                        android:textSize="@dimen/text_caption" />
+
+                    <TextView
+                        android:id="@+id/chipOpportunityUrgent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:background="@drawable/bg_home_filter_chip"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Urgentes"
+                        android:textColor="@color/match_text_secondary"
+                        android:textSize="@dimen/text_caption" />
+
+                    <TextView
+                        android:id="@+id/chipOpportunityEditorial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:background="@drawable/bg_home_filter_chip"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Editorial"
+                        android:textColor="@color/match_text_secondary"
+                        android:textSize="@dimen/text_caption" />
+
+                    <TextView
+                        android:id="@+id/chipOpportunityCommercial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:background="@drawable/bg_home_filter_chip"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Comercial"
+                        android:textColor="@color/match_text_secondary"
+                        android:textSize="@dimen/text_caption" />
+
+                    <TextView
+                        android:id="@+id/chipOpportunityRunway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:background="@drawable/bg_home_filter_chip"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Passarela"
+                        android:textColor="@color/match_text_secondary"
+                        android:textSize="@dimen/text_caption" />
+
+                    <TextView
+                        android:id="@+id/chipOpportunityPremium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:background="@drawable/bg_home_filter_chip"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/spacing_lg"
+                        android:text="Premium"
+                        android:textColor="@color/match_text_secondary"
+                        android:textSize="@dimen/text_caption" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Company spotlight for model users -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/see_all"
-                android:textColor="@color/match_gold"
-                android:textSize="@dimen/text_small" />
+                android:layout_marginHorizontal="@dimen/spacing_xl"
+                android:layout_marginBottom="@dimen/spacing_md"
+                android:background="@drawable/bg_proposals_header"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/spacing_lg">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Empresas em alta"
+                        style="@style/TextAppearance.Modela.Label" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvModelFeedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_opportunity_count_pill"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:minWidth="78dp"
+                    android:paddingHorizontal="@dimen/spacing_lg"
+                    android:text="0 novas"
+                    android:textColor="@color/match_white"
+                    android:textSize="@dimen/text_caption" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCompanySpotlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/spacing_xl"
+                android:paddingBottom="@dimen/spacing_md">
+
+                <TextView
+                    style="@style/TextAppearance.Modela.Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Feed de oportunidades" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_model_home_filter_pill"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spacing_md"
+                    android:text="Recentes"
+                    android:textColor="@color/match_text_primary"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJobOpenings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="80dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvFeatured"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clipToPadding="false"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:layout_marginBottom="@dimen/spacing_xl"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-        <!-- Trending Models -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:paddingBottom="@dimen/spacing_md">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/trending"
-                style="@style/TextAppearance.Modela.Label" />
-
-            <TextView
-                android:id="@+id/tvSeeAllTrending"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/see_all"
-                android:textColor="@color/match_gold"
-                android:textSize="@dimen/text_small" />
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvTrending"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:clipToPadding="false"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:layout_marginBottom="@dimen/spacing_xl"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-        <!-- Recommended -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recommended"
-            android:paddingHorizontal="@dimen/spacing_xl"
-            android:paddingBottom="@dimen/spacing_md"
-            style="@style/TextAppearance.Modela.Label" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecommended"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginBottom="70dp"
-            android:clipToPadding="false"
-            android:paddingHorizontal="@dimen/spacing_lg"
-            android:paddingBottom="@dimen/spacing_lg"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

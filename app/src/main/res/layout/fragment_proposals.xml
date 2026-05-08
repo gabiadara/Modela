@@ -17,6 +17,7 @@
         android:padding="@dimen/spacing_xl">
 
         <TextView
+            android:id="@+id/tvHeaderKicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
@@ -54,6 +55,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tvHeaderSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_sm"
@@ -63,6 +65,7 @@
     </LinearLayout>
 
     <HorizontalScrollView
+        android:id="@+id/proposalFilterScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/spacing_lg"
@@ -125,18 +128,35 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <TextView
-        android:id="@+id/btnCreateProposal"
+    <LinearLayout
+        android:id="@+id/layoutCreateActions"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_xl"
         android:layout_marginBottom="@dimen/spacing_lg"
-        android:background="@drawable/bg_button_gold"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:text="+ Nova Proposta"
-        android:textColor="@color/match_white"
-        android:textSize="@dimen/text_button"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btnCreateCampaign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/bg_proposal_action_primary"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="+ Criar campanha"
+            android:textColor="@color/match_white"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCompanyCampaigns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/spacing_xs"
+        android:paddingBottom="100dp"
         android:visibility="gone" />
 
     <LinearLayout

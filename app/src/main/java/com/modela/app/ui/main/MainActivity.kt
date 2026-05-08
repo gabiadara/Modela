@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
         // Hide bottom nav on detail screens
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.modelProfileFragment, R.id.chatFragment, R.id.proposalDetailFragment -> {
+                R.id.modelProfileFragment, R.id.chatFragment,
+                R.id.proposalDetailFragment, R.id.jobOpeningDetailFragment,
+                R.id.createCampaignFragment, R.id.campaignCandidatesFragment -> {
                     binding.bottomNav.visibility = View.GONE
                 }
                 else -> {
