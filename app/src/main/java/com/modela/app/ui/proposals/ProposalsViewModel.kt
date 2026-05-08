@@ -46,7 +46,7 @@ class ProposalsViewModel : ViewModel() {
         ProposalWorkflowStore.updateStatus(
             proposal.id,
             ProposalStatus.ACCEPTED,
-            AcceptedProposalStage.SCOUTING
+            AcceptedProposalStage.CASTING
         )
         refresh()
     }

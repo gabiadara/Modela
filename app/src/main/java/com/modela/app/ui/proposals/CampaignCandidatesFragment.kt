@@ -74,7 +74,7 @@ class CampaignCandidatesFragment : Fragment() {
             source.mapIndexed { index, profile ->
                 val stage = when {
                     index < 4 -> CastingStage.INSCRITO
-                    index < 6 -> CastingStage.SHORTLIST
+                    index < 6 -> CastingStage.FAVORITOS
                     index < 7 -> CastingStage.CASTING
                     else -> CastingStage.APROVADO
                 }
@@ -208,7 +208,7 @@ class CampaignCandidatesFragment : Fragment() {
     private fun updateStepper(stage: CastingStage) {
         val views = listOf(
             binding.stepInscrito,
-            binding.stepShortlist,
+            binding.stepFavoritos,
             binding.stepCasting,
             binding.stepAprovado
         )

@@ -167,7 +167,7 @@ class ProposalDetailFragment : Fragment() {
 
         val steps = listOf(
             Step("Inscrito", "Sua candidatura foi recebida pela empresa.", "#1E1E1E"),
-            Step("Shortlist", "Seu perfil entrou nos favoritos da marca.", "#8B6F3D"),
+            Step("Favoritos", "Seu perfil entrou nos favoritos da marca.", "#8B6F3D"),
             Step("Casting", "Teste, entrevista ou prova de roupa em andamento.", "#3B6A8C"),
             Step("Aprovado", "Contratado para o job e pronto para briefing final.", "#4F8A6B")
         )
@@ -276,7 +276,7 @@ class ProposalDetailFragment : Fragment() {
             val updated = ProposalWorkflowStore.updateStatus(
                 proposal.id,
                 ProposalStatus.ACCEPTED,
-                AcceptedProposalStage.SCOUTING
+                AcceptedProposalStage.CASTING
             ) ?: return
             currentProposal = updated
             approvalCelebrationShown = true
@@ -375,7 +375,7 @@ class ProposalDetailFragment : Fragment() {
         })
 
         card.addView(TextView(requireContext()).apply {
-            text = "Agora ela esta em Aceitas como Scouting"
+            text = "Agora ela esta em Aceitas como Casting"
             gravity = Gravity.CENTER
             setTextColor(Color.parseColor("#8B6F3D"))
             textSize = 13f

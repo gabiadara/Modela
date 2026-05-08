@@ -15,7 +15,7 @@ object ProposalWorkflowStore {
     fun updateStatus(
         proposalId: String,
         status: ProposalStatus,
-        acceptedStage: AcceptedProposalStage = AcceptedProposalStage.SCOUTING
+        acceptedStage: AcceptedProposalStage = AcceptedProposalStage.CASTING
     ): Proposal? {
         var updated: Proposal? = null
         proposals = proposals.map { proposal ->
@@ -35,7 +35,7 @@ object ProposalWorkflowStore {
         proposals = proposals.map { proposal ->
             if (proposal.id == proposalId && proposal.status == ProposalStatus.ACCEPTED) {
                 val next = when (proposal.acceptedStage) {
-                    AcceptedProposalStage.SCOUTING -> proposal.copy(
+                    AcceptedProposalStage.CASTING -> proposal.copy(
                         acceptedStage = AcceptedProposalStage.JOB
                     )
                     AcceptedProposalStage.JOB -> proposal.copy(

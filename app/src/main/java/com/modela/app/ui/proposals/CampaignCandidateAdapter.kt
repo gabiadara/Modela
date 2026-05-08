@@ -23,11 +23,11 @@ enum class CastingStage(
         "Inscritos",
         "Candidatos que aplicaram para a campanha e aguardam curadoria.",
         "#1E1E1E",
-        "Shortlist"
+        "Favoritos"
     ),
-    SHORTLIST(
-        "Shortlist",
-        "Shortlist",
+    FAVORITOS(
+        "Favoritos",
+        "Favoritos",
         "Favoritos da empresa, separados para decisao criativa.",
         "#8B6F3D",
         "Casting"

@@ -73,7 +73,7 @@ class ProposalAdapter(
             binding.acceptedJourneyPanel.visibility = View.VISIBLE
             binding.tvJourneyStatus.text = proposal.acceptedStage.label
             binding.tvJourneyStatus.setTextColor(Color.parseColor(proposal.acceptedStage.colorHex))
-            binding.btnAdvanceAcceptedStage.text = if (proposal.acceptedStage.name == "SCOUTING") {
+            binding.btnAdvanceAcceptedStage.text = if (proposal.acceptedStage.name == "CASTING") {
                 "Avancar para Job"
             } else {
                 "Concluir Job"

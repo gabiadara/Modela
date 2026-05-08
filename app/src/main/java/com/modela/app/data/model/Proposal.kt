@@ -13,7 +13,7 @@ data class Proposal(
     val date: String = "",
     val budget: String = "",
     val status: ProposalStatus = ProposalStatus.PENDING,
-    val acceptedStage: AcceptedProposalStage = AcceptedProposalStage.SCOUTING,
+    val acceptedStage: AcceptedProposalStage = AcceptedProposalStage.CASTING,
     val timestamp: Long = System.currentTimeMillis()
 )
 
@@ -25,6 +25,6 @@ enum class ProposalStatus(val label: String, val colorHex: String) {
 }
 
 enum class AcceptedProposalStage(val label: String, val colorHex: String) {
-    SCOUTING("Scouting", "#8B6F3D"),
+    CASTING("Casting", "#3B6A8C"),
     JOB("Job", "#3B6A8C")
 }
